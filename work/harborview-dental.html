@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harborview Dental | Concept by IronStack Studio</title>
+<meta name="description" content="A concept dental clinic website designed by IronStack Studio. Not a real business.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F8F9;--ink:#0E3442;--ink-2:#3D5A66;--teal:#2F7F93;--mint:#D9EEF2;--mint-2:#BFE3EA;--sun:#F6C453;--white:#fff;--line:#D5E4E8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Figtree",system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+/* concept bar */
+.concept-bar{background:#14181F;color:#C9CED5;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.concept-bar a{color:#D4A84B;text-decoration:underline}
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,248,249,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:-.01em}
+.brand svg{width:34px;height:34px}
+.links{display:flex;gap:30px;list-style:none;font-weight:500;color:var(--ink-2)}
+.links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:700;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--teal)}
+.btn-line{box-shadow:inset 0 0 0 2px var(--ink)}
+.btn-sun{background:var(--sun);color:var(--ink)}
+@media (max-width:860px){.links{display:none}}
+/* hero */
+.hero{padding:72px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--teal);font-weight:600;font-size:.9rem;border-radius:999px;padding:7px 14px;margin-bottom:22px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+h1{font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:22px}
+.hero p.lead{font-size:1.15rem;color:var(--ink-2);max-width:46ch;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px}
+.perks{display:flex;flex-wrap:wrap;gap:22px;list-style:none;font-weight:600;font-size:.95rem}
+.perks li{display:flex;align-items:center;gap:8px}
+.perks svg{width:20px;height:20px;color:var(--teal)}
+/* booking card */
+.booking{position:relative;background:#fff;border-radius:28px;padding:30px;box-shadow:0 30px 80px rgba(14,52,66,.14);border:1px solid var(--line)}
+.booking::before{content:"";position:absolute;inset:-26px -26px auto auto;width:150px;height:150px;border-radius:50%;background:var(--sun);z-index:-1}
+.booking::after{content:"";position:absolute;left:-30px;bottom:-30px;width:200px;height:200px;border-radius:40px;background:var(--mint-2);z-index:-1;transform:rotate(12deg)}
+.booking h2{font-size:1.35rem;letter-spacing:-.01em;margin-bottom:4px}
+.booking .sub{color:var(--ink-2);font-size:.95rem;margin-bottom:22px}
+.label{font-size:.82rem;font-weight:700;color:var(--ink-2);margin-bottom:10px}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:22px}
+.days button,.times button{border:1.5px solid var(--line);border-radius:14px;padding:10px 4px;font-weight:600;background:#fff;transition:all .2s}
+.days button small{display:block;font-weight:500;font-size:.75rem;color:var(--ink-2)}
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px}
+.days button[aria-pressed="true"],.times button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.days button[aria-pressed="true"] small{color:var(--mint-2)}
+.booking .btn{width:100%;justify-content:center}
+.demo-note{margin-top:14px;font-size:.88rem;color:var(--teal);font-weight:600;min-height:1.4em;text-align:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.booking::before{width:100px;height:100px;inset:-18px -10px auto auto}}
+/* sections */
+section.block{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.05;font-weight:800;max-width:16ch}
+.head p{color:var(--ink-2);max-width:42ch}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(14,52,66,.1)}
+.svc .ic{width:52px;height:52px;border-radius:16px;background:var(--mint);display:grid;place-items:center;margin-bottom:20px;color:var(--teal)}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-size:1.2rem;margin-bottom:6px}
+.svc p{color:var(--ink-2);font-size:.98rem}
+@media (max-width:900px){.services{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.services{grid-template-columns:1fr}}
+/* first visit */
+.visit{background:var(--ink);color:#fff;border-radius:36px;padding:clamp(36px,6vw,72px);display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.visit h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.05}
+.visit p.intro{color:#A9C6CF;margin-top:16px;max-width:36ch}
+.steps{list-style:none;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;background:rgba(255,255,255,.06);border-radius:18px;padding:20px}
+.steps li::before{counter-increment:s;content:counter(s);width:48px;height:48px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:1.2rem}
+.steps b{display:block;font-size:1.08rem;margin-bottom:2px}
+.steps span{color:#A9C6CF;font-size:.96rem}
+@media (max-width:900px){.visit{grid-template-columns:1fr}}
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.doc .ph{aspect-ratio:4/3;display:grid;place-items:center;font-weight:800;font-size:3rem;color:#fff;letter-spacing:-.02em}
+.doc:nth-child(1) .ph{background:linear-gradient(150deg,#8CCAD6,#2F7F93)}
+.doc:nth-child(2) .ph{background:linear-gradient(150deg,#F6C453,#E39A3B)}
+.doc:nth-child(3) .ph{background:linear-gradient(150deg,#9DB7F0,#4D6BB8)}
+.doc div.t{padding:22px}
+.doc h3{font-size:1.15rem}
+.doc p{color:var(--ink-2);font-size:.95rem}
+@media (max-width:800px){.team{grid-template-columns:1fr}}
+/* insurance + hours */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.card h3{font-size:1.4rem;letter-spacing:-.01em;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chips span{background:var(--mint);color:var(--ink);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.92rem}
+.hours{list-style:none;display:grid;gap:10px;margin-top:6px}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.hours li span:last-child{font-weight:700}
+.map{margin-top:20px;height:150px;border-radius:18px;background:
+  linear-gradient(90deg,transparent 48%,#fff 48% 52%,transparent 52%),
+  linear-gradient(0deg,transparent 40%,#fff 40% 45%,transparent 45%),
+  linear-gradient(135deg,#CFE6EC,#E8F3F5);position:relative}
+.map::after{content:"";position:absolute;left:calc(50% - 14px);top:calc(42% - 34px);width:28px;height:28px;border-radius:50% 50% 50% 0;background:var(--ink);transform:rotate(-45deg);box-shadow:0 6px 14px rgba(14,52,66,.3)}
+@media (max-width:800px){.split{grid-template-columns:1fr}}
+/* cta */
+.cta{background:var(--sun);border-radius:36px;padding:clamp(36px,6vw,72px);display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;line-height:1.02;max-width:14ch}
+footer{padding:44px 0;color:var(--ink-2);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="concept-bar">Concept website designed by <a href="/">IronStack Studio</a>. Harborview Dental is not a real business. <a href="/#work">Back to concepts</a></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#0E3442"/><path d="M12 13c0-3 2.5-4.5 5-3.5 1.4.6 2.2.6 3 .6s1.6 0 3-.6c2.5-1 5 .5 5 3.5 0 3-1 5.5-1.8 8.5-.6 2.3-1 5.5-2.7 5.5-1.6 0-1.6-4.5-3.5-4.5s-1.9 4.5-3.5 4.5c-1.7 0-2.1-3.2-2.7-5.5C13 18.5 12 16 12 13z" fill="#F6C453"/></svg>Harborview</a>
+    <ul class="links"><li><a href="#services">Services</a></li><li><a href="#visit">First visit</a></li><li><a href="#team">Our team</a></li><li><a href="#info">Insurance</a></li></ul>
+    <a href="#book" class="btn btn-dark">Book a visit</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><i></i>New patients welcome</span>
+        <h1>Gentle care for the whole family.</h1>
+        <p class="lead">Same-week appointments, most insurance accepted, and a team that explains every step before we start.</p>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-dark">Book online</a>
+          <a href="tel:5550100142" class="btn btn-line">Call (555) 010-0142</a>
+        </div>
+        <ul class="perks">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Same-week visits</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Evening hours</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Kids love it here</li>
+        </ul>
+      </div>
+
+      <div class="booking" id="book">
+        <h2>Pick a time that works</h2>
+        <p class="sub">Choose a day and time. We confirm by text within the hour.</p>
+        <p class="label">Day</p>
+        <div class="days" data-group="day">
+          <button aria-pressed="true">Mon<small>21</small></button>
+          <button aria-pressed="false">Tue<small>22</small></button>
+          <button aria-pressed="false">Wed<small>23</small></button>
+          <button aria-pressed="false">Thu<small>24</small></button>
+          <button aria-pressed="false">Fri<small>25</small></button>
+        </div>
+        <p class="label">Time</p>
+        <div class="times" data-group="time">
+          <button aria-pressed="false">8:30 AM</button>
+          <button aria-pressed="true">10:00 AM</button>
+          <button aria-pressed="false">1:15 PM</button>
+          <button aria-pressed="false">3:45 PM</button>
+          <button aria-pressed="false">5:30 PM</button>
+          <button aria-pressed="false">7:00 PM</button>
+        </div>
+        <button class="btn btn-dark" id="request">Request this time</button>
+        <p class="demo-note" id="note" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head"><h2>Everything your smile needs, in one place</h2><p>From routine cleanings to same-day emergencies, our team handles it without sending you across town.</p></div>
+      <div class="services">
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.6 7 18.2l1-5.5-4-3.9 5.5-.8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Cleanings and checkups</h3><p>Thorough, gentle cleanings with digital X-rays and a clear plan.</p></article>
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="10" rx="5" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2"/></svg></div><h3>Clear aligners</h3><p>Straighter teeth with nearly invisible aligners. Free consultation.</p></article>
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Same-day emergencies</h3><p>Toothache or chipped tooth? Call before noon and we will see you today.</p></article>
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18c3-6 13-6 16 0M8 9a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" stroke="currentColor" stroke-width="2"/></svg></div><h3>Kids dentistry</h3><p>Friendly first visits that make kids look forward to coming back.</p></article>
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Whitening</h3><p>In-office and take-home whitening for a brighter smile in weeks.</p></article>
+        <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 20V9l6-5 6 5v11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-6h4v6" stroke="currentColor" stroke-width="2"/></svg></div><h3>Implants and crowns</h3><p>Long-lasting restorations planned and placed under one roof.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="visit">
+        <div><h2>Your first visit, made easy</h2><p class="intro">No surprises and no pressure. Here is exactly what happens when you come in.</p></div>
+        <ol class="steps">
+          <li><div><b>Book in two minutes</b><span>Pick a time online or call us. Forms are sent by text.</span></div></li>
+          <li><div><b>Meet your dentist</b><span>A full checkup, X-rays and a calm walk through what we see.</span></div></li>
+          <li><div><b>Get a clear plan</b><span>Costs and insurance coverage explained before any treatment.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="team" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Meet the team</h2><p>Experienced, patient and genuinely kind. Example team members for this concept.</p></div>
+      <div class="team">
+        <article class="doc"><div class="ph">LO</div><div class="t"><h3>Dr. Lena Ortiz</h3><p>General and family dentistry</p></div></article>
+        <article class="doc"><div class="ph">MK</div><div class="t"><h3>Dr. Marcus Kim</h3><p>Aligners and cosmetic care</p></div></article>
+        <article class="doc"><div class="ph">JR</div><div class="t"><h3>Jamie Reyes</h3><p>Lead hygienist</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="info" style="padding-top:0">
+    <div class="wrap split">
+      <div class="card">
+        <h3>Insurance and payment</h3>
+        <p style="color:var(--ink-2)">We work with most PPO plans and file claims for you. No insurance? Our membership plan covers cleanings and checkups for a flat monthly fee.</p>
+        <div class="chips"><span>Most PPO plans</span><span>Membership plan</span><span>Monthly payments</span><span>HSA and FSA cards</span></div>
+      </div>
+      <div class="card">
+        <h3>Hours and location</h3>
+        <ul class="hours"><li><span>Monday to Thursday</span><span>8 AM to 7 PM</span></li><li><span>Friday</span><span>8 AM to 4 PM</span></li><li><span>Saturday</span><span>9 AM to 1 PM</span></li></ul>
+        <div class="map" role="img" aria-label="Map placeholder"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta"><h2>Ready for a healthier smile?</h2><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#book" class="btn btn-dark">Book online</a><a href="tel:5550100142" class="btn btn-line">(555) 010-0142</a></div></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Harborview Dental is a fictional business. Concept design by <a href="/" style="text-decoration:underline">IronStack Studio</a>.</span><a href="/#work" style="text-decoration:underline">See more concepts</a></div></footer>
+
+<script>
+document.querySelectorAll('[data-group]').forEach(g=>{
+  g.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b));
+  });
+});
+document.getElementById('request').addEventListener('click',()=>{
+  const d=document.querySelector('[data-group="day"] [aria-pressed="true"]').firstChild.textContent;
+  const t=document.querySelector('[data-group="time"] [aria-pressed="true"]').textContent;
+  document.getElementById('note').textContent='Concept demo: '+d+' at '+t+' selected. No real booking was made.';
+});
+</script>
+</body>
+</html>

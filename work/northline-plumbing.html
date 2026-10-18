@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northline Plumbing | Concept by IronStack Studio</title>
+<meta name="description" content="A concept plumbing company website designed by IronStack Studio. Not a real business.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1A33;--navy-2:#1B2A4F;--navy-3:#22345F;--yellow:#F5B731;--paper:#F3F5F9;--ink:#0F1A33;--muted:#5B6782;--line:#D9DEE8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Archivo",system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,select,input{font:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.concept-bar{background:#14181F;color:#C9CED5;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.concept-bar a{color:#D4A84B;text-decoration:underline}
+.alert{background:var(--yellow);color:var(--navy);font-weight:700;font-size:.92rem}
+.alert .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:12px}
+.alert a{text-decoration:underline}
+.x{font-stretch:118%;font-weight:900;letter-spacing:-.02em;text-transform:uppercase}
+/* nav */
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.brand{display:flex;align-items:center;gap:12px;font-size:1.3rem}
+.brand svg{width:36px;height:36px}
+.links{display:flex;gap:32px;list-style:none;font-weight:600;color:#C3CCE0}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:6px;font-weight:800;font-stretch:110%;text-transform:uppercase;letter-spacing:.02em;font-size:.95rem;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,26,51,.25)}
+.btn-y{background:var(--yellow);color:var(--navy)}
+.btn-o{box-shadow:inset 0 0 0 2px currentColor;color:#fff}
+@media (max-width:900px){.links{display:none}}
+.btn{white-space:nowrap}
+@media (max-width:600px){
+  .alert .wrap{justify-content:center;height:auto;padding-top:9px;padding-bottom:9px}
+  .alert span{display:none}
+  header .btn{padding:12px 16px;font-size:.85rem}
+  .brand{font-size:1.1rem}
+  .trust .wrap{grid-template-columns:1fr}
+}
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:72px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.025) 22px 44px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.4rem);line-height:.92;margin-bottom:24px}
+.hero h1 span{color:var(--yellow)}
+.hero p{color:#C3CCE0;font-size:1.15rem;max-width:44ch;margin-bottom:32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+.quote{background:#fff;color:var(--ink);border-radius:10px 10px 0 0;padding:32px;box-shadow:0 -10px 60px rgba(0,0,0,.25)}
+.quote h2{font-size:1.5rem;margin-bottom:6px}
+.quote p.s{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+.quote label{display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.quote select,.quote input{width:100%;padding:14px;border:1.5px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.quote .btn{width:100%;margin-top:20px}
+.quote .note{margin-top:12px;font-weight:700;color:#1D7A4A;min-height:1.4em;font-size:.92rem}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-actions{margin-bottom:10px}}
+/* trust */
+.trust{background:var(--navy-2);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:26px 20px;border-left:1px solid rgba(255,255,255,.1);display:flex;gap:14px;align-items:center;font-weight:700}
+.trust div:first-child{border-left:0;padding-left:0}
+.trust svg{width:30px;height:30px;color:var(--yellow);flex:none}
+@media (max-width:900px){.trust .wrap{grid-template-columns:1fr 1fr}.trust div{border-left:0;padding-left:0}}
+/* services */
+section.block{padding:96px 0}
+.head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.head h2{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:.95}
+.head p{color:var(--muted);max-width:40ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--line)}
+.svc{background:#fff;padding:32px;position:relative;transition:background .25s}
+.svc:hover{background:var(--navy);color:#fff}
+.svc:hover p{color:#C3CCE0}
+.svc .price{position:absolute;top:28px;right:28px;font-weight:800;font-size:.85rem;background:var(--yellow);color:var(--navy);padding:6px 10px;border-radius:4px}
+.svc svg{width:40px;height:40px;color:var(--navy-3);margin-bottom:22px}
+.svc:hover svg{color:var(--yellow)}
+.svc h3{font-size:1.35rem;margin-bottom:8px}
+.svc p{color:var(--muted)}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+/* how */
+.how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;list-style:none}
+.steps li b{display:block;font-size:4.5rem;line-height:1;color:var(--yellow);-webkit-text-stroke:2px var(--navy);margin-bottom:14px}
+.steps li h3{font-size:1.3rem;margin-bottom:6px}
+.steps li p{color:var(--muted)}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+/* areas */
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--navy);border-radius:999px;padding:10px 18px;font-weight:700}
+.promise{background:var(--yellow);border-radius:10px;padding:40px}
+.promise h3{font-size:2rem;line-height:1;margin-bottom:14px}
+@media (max-width:900px){.areas{grid-template-columns:1fr}}
+/* cta */
+.cta{background:var(--navy);color:#fff;padding:80px 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{font-size:clamp(2.2rem,5vw,4rem);line-height:.95}
+.cta h2 span{color:var(--yellow)}
+footer{background:#0A1226;color:#8D98B3;padding:30px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="concept-bar">Concept website designed by <a href="/">IronStack Studio</a>. Northline Plumbing is not a real business. <a href="/#work">Back to concepts</a></div>
+<div class="alert"><div class="wrap"><span>Burst pipe or no hot water? We answer 24/7.</span><a href="tel:5550100187">(555) 010-0187</a></div></div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="brand x"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#F5B731"/><path d="M10 28V14a4 4 0 0 1 4-4h6v6h-4v12z" fill="#0F1A33"/><path d="M22 10h4a4 4 0 0 1 4 4v4h-8z" fill="#0F1A33"/><circle cx="26" cy="27" r="3" fill="#0F1A33"/></svg>Northline</a>
+    <ul class="links"><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#areas">Areas</a></li></ul>
+    <a href="tel:5550100187" class="btn btn-y">Call now</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 class="x">Same-day plumbing. <span>Fixed upfront prices.</span></h1>
+        <p>Licensed plumbers on the road seven days a week. You approve the price before we pick up a wrench.</p>
+        <div class="hero-actions"><a href="#quote" class="btn btn-y">Get a free quote</a><a href="#services" class="btn btn-o">See our prices</a></div>
+      </div>
+      <form class="quote" id="quote" onsubmit="event.preventDefault();document.getElementById('qn').textContent='Concept demo: no request was sent.';">
+        <h2 class="x">Get a quote in 60 seconds</h2>
+        <p class="s">Tell us what is going on and we will text you a price.</p>
+        <label for="svc">What do you need?</label>
+        <select id="svc"><option>Leak or burst pipe</option><option>Clogged drain</option><option>Water heater</option><option>Toilet repair</option><option>Something else</option></select>
+        <label for="zip">ZIP code</label>
+        <input id="zip" inputmode="numeric" placeholder="e.g. 55401">
+        <button class="btn btn-y" type="submit">Get my price</button>
+        <p class="note" id="qn" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="trust"><div class="wrap">
+    <div><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" stroke="currentColor" stroke-width="2"/></svg>Licensed and insured</div>
+    <div><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z M8 12h8" stroke="currentColor" stroke-width="2"/></svg>Upfront pricing</div>
+    <div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2"/></svg>Open 7 days</div>
+    <div><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4"/></svg>1-year work guarantee</div>
+  </div></div>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="head"><h2 class="x">What we fix</h2><p>Example starting prices for this concept. Every job gets a fixed price before work begins.</p></div>
+      <div class="grid">
+        <article class="svc"><span class="price">from $129</span><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z" stroke="currentColor" stroke-width="2"/></svg><h3 class="x">Leaks</h3><p>Pipes, faucets and fixtures found and fixed fast.</p></article>
+        <article class="svc"><span class="price">from $99</span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="2"/></svg><h3 class="x">Clogs</h3><p>Kitchen, bath and main line drains cleared.</p></article>
+        <article class="svc"><span class="price">from $189</span><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="3" width="10" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M10 15h4" stroke="currentColor" stroke-width="2"/></svg><h3 class="x">Water heaters</h3><p>Repairs, flushes and same-day replacements.</p></article>
+        <article class="svc"><span class="price">from $89</span><svg viewBox="0 0 24 24" fill="none"><path d="M6 4h8v6H6zM4 10h14l-2 10H8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><h3 class="x">Toilets</h3><p>Running, leaking or clogged toilets repaired.</p></article>
+        <article class="svc"><span class="price">from $149</span><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h6l2-4 2 8 2-4h6" stroke="currentColor" stroke-width="2"/></svg><h3 class="x">Inspections</h3><p>Camera inspections before you buy or renovate.</p></article>
+        <article class="svc"><span class="price">24/7</span><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v9M12 17v2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg><h3 class="x">Emergencies</h3><p>Burst pipes and flooding, any hour of the day.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block how" id="how">
+    <div class="wrap">
+      <div class="head"><h2 class="x">How it works</h2></div>
+      <ol class="steps">
+        <li><b class="x">1</b><h3 class="x">Tell us</h3><p>Call, text or use the quote form. A real person answers.</p></li>
+        <li><b class="x">2</b><h3 class="x">Approve the price</h3><p>Our plumber confirms the fixed price on site before starting.</p></li>
+        <li><b class="x">3</b><h3 class="x">Fixed today</h3><p>Most jobs are finished in one visit, and we clean up after.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="areas">
+    <div class="wrap areas">
+      <div>
+        <div class="head" style="margin-bottom:24px"><h2 class="x">Areas we serve</h2></div>
+        <div class="chips"><span>Downtown</span><span>North Loop</span><span>Riverside</span><span>Oak Hill</span><span>Lakeview</span><span>West End</span><span>Cedar Park</span><span>Maple Grove</span></div>
+      </div>
+      <div class="promise"><h3 class="x">The Northline promise</h3><p>If the price changes after you approve it, the difference is on us. No overtime fees on weekends.</p></div>
+    </div>
+  </section>
+
+  <section class="cta"><div class="wrap"><h2 class="x">Leak right now? <span>We are on our way.</span></h2><a href="tel:5550100187" class="btn btn-y">Call (555) 010-0187</a></div></section>
+</main>
+
+<footer><div class="wrap"><span>Northline Plumbing is a fictional business. Concept design by <a href="/">IronStack Studio</a>.</span><a href="/#work">See more concepts</a></div></footer>
+</body>
+</html>

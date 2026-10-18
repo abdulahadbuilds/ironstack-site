@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maple and Oak Bistro | Concept by IronStack Studio</title>
+<meta name="description" content="A concept restaurant website designed by IronStack Studio. Not a real business.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bark:#2A1B14;--bark-2:#3B271D;--bark-3:#4A3226;--cream:#FBEEE1;--ember:#E08A4F;--ember-2:#C2662F;--muted:#C9AE98;--line:rgba(251,238,225,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Figtree",system-ui,sans-serif;background:var(--bark);color:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:4px}
+.serif{font-family:"Fraunces",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.concept-bar{background:#14181F;color:#C9CED5;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.concept-bar a{color:#D4A84B;text-decoration:underline}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:84px;border-bottom:1px solid var(--line)}
+.brand{font-size:1.6rem}
+.brand em{font-style:italic;color:var(--ember)}
+.links{display:flex;gap:34px;list-style:none;color:var(--muted)}
+.links a:hover{color:var(--cream)}
+.btn{display:inline-block;padding:15px 26px;border:1px solid var(--cream);font-weight:600;letter-spacing:.02em;transition:background .25s,color .25s;cursor:pointer;background:transparent}
+.btn:hover,.btn.solid{background:var(--cream);color:var(--bark)}
+.btn.solid:hover{background:var(--ember);border-color:var(--ember);color:var(--bark)}
+@media (max-width:860px){.links{display:none}}
+/* hero */
+.hero{padding:80px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;margin-bottom:28px;font-weight:350}
+.hero h1 em{color:var(--ember)}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:40ch;margin-bottom:36px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.arch{aspect-ratio:4/5;border-radius:400px 400px 6px 6px;background:radial-gradient(circle at 50% 62%,#F2B27A 0,#E08A4F 18%,#8A3E1E 42%,#3B1E12 70%);position:relative;overflow:hidden}
+.arch .plate{position:absolute;left:50%;top:62%;width:58%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,#FBEEE1 0 52%,#E9D6C2 53% 60%,#FBEEE1 61% 68%,transparent 69%);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.arch .plate::before{content:"";position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle at 40% 40%,#7A8F3D,#4E5E22 60%);box-shadow:14px 6px 0 -6px #C2662F,-10px 12px 0 -7px #E8B04B}
+.arch .steam{position:absolute;left:50%;top:18%;width:2px;height:90px;background:linear-gradient(transparent,rgba(251,238,225,.5),transparent);box-shadow:-30px 20px 0 rgba(251,238,225,.25),30px 10px 0 rgba(251,238,225,.25)}
+.arch figcaption{position:absolute;left:24px;bottom:20px;font-size:.85rem;color:var(--cream);opacity:.8}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.arch{max-width:420px}}
+/* about */
+.about{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:90px 0}
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.about h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1}
+.about p{font-size:1.2rem;color:var(--muted)}
+.about p+p{margin-top:16px}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:24px}}
+/* menu */
+.menu{padding:100px 0}
+.menu-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-bottom:40px}
+.menu-head h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1}
+.tabs{display:flex;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px}
+.tabs button{border:0;background:transparent;border-radius:999px;padding:10px 20px;cursor:pointer;color:var(--muted);font-weight:600}
+.tabs button[aria-selected="true"]{background:var(--cream);color:var(--bark)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:0 60px}
+.panel.on{display:grid}
+.dish{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dish h3{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.4rem}
+.dish span{font-family:"Fraunces",Georgia,serif;font-size:1.3rem;color:var(--ember)}
+.dish p{grid-column:1/-1;color:var(--muted);font-size:.98rem}
+@media (max-width:860px){.panel.on{grid-template-columns:1fr}}
+/* reserve */
+.reserve{background:var(--bark-2);padding:100px 0}
+.reserve .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.reserve h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1;margin-bottom:22px}
+.info{list-style:none;display:grid;gap:14px;margin-top:30px;color:var(--muted)}
+.info b{color:var(--cream);font-weight:600;display:block}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+form label{font-size:.82rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px}
+form input,form select{width:100%;padding:15px;background:transparent;border:1px solid var(--line);border-radius:0}
+form option{color:#000}
+form .full{grid-column:1/-1}
+.demo{color:var(--ember);font-weight:600;min-height:1.4em}
+@media (max-width:860px){.reserve .wrap{grid-template-columns:1fr}}
+/* events */
+.events{padding:100px 0;text-align:center}
+.events h2{font-size:clamp(2.4rem,6vw,5rem);line-height:1;max-width:14ch;margin:0 auto 22px}
+.events p{color:var(--muted);max-width:52ch;margin:0 auto 32px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="concept-bar">Concept website designed by <a href="/">IronStack Studio</a>. Maple and Oak Bistro is not a real business. <a href="/#work">Back to concepts</a></div>
+
+<header><div class="wrap">
+  <a href="#" class="brand serif">Maple <em>and</em> Oak</a>
+  <ul class="links"><li><a href="#menu">Menu</a></li><li><a href="#story">Our story</a></li><li><a href="#events">Private dining</a></li><li><a href="#reserve">Visit</a></li></ul>
+  <a href="#reserve" class="btn">Reserve</a>
+</div></header>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <div>
+      <h1 class="serif">Seasonal plates, <em>cooked over fire.</em></h1>
+      <p>A neighborhood bistro with a short menu that changes with the market, a wood-fired grill and a wine list built for sharing.</p>
+      <div class="actions"><a href="#reserve" class="btn solid">Book a table</a><a href="#menu" class="btn">View the menu</a></div>
+    </div>
+    <figure class="arch" role="img" aria-label="Illustration of a plated dish"><span class="steam"></span><span class="plate"></span><figcaption>Illustration for this concept</figcaption></figure>
+  </div></section>
+
+  <section class="about" id="story"><div class="wrap">
+    <h2 class="serif">Small kitchen. Big fire. Good neighbors.</h2>
+    <div><p>Everything here starts on the grill or in the oven, with produce from farms within a two-hour drive.</p><p>The menu changes every few weeks, so there is always a reason to come back.</p></div>
+  </div></section>
+
+  <section class="menu" id="menu"><div class="wrap">
+    <div class="menu-head">
+      <h2 class="serif">The menu</h2>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="dinner">Dinner</button>
+        <button role="tab" aria-selected="false" data-tab="brunch">Brunch</button>
+        <button role="tab" aria-selected="false" data-tab="drinks">Drinks</button>
+      </div>
+    </div>
+    <div class="panel on" id="dinner">
+      <div class="dish"><h3>Charred leeks</h3><span>14</span><p>Romesco, toasted hazelnuts, lemon</p></div>
+      <div class="dish"><h3>Wood-fired flatbread</h3><span>16</span><p>Wild mushrooms, fontina, thyme honey</p></div>
+      <div class="dish"><h3>Grilled half chicken</h3><span>28</span><p>Salsa verde, crispy potatoes, charred lemon</p></div>
+      <div class="dish"><h3>Hanger steak</h3><span>34</span><p>Smoked onion butter, market greens</p></div>
+      <div class="dish"><h3>Fire-roasted carrots</h3><span>13</span><p>Whipped feta, dukkah, mint</p></div>
+      <div class="dish"><h3>Burnt honey tart</h3><span>11</span><p>Crème fraîche, sea salt</p></div>
+    </div>
+    <div class="panel" id="brunch">
+      <div class="dish"><h3>Skillet eggs</h3><span>15</span><p>Tomato, peppers, grilled sourdough</p></div>
+      <div class="dish"><h3>Buttermilk pancakes</h3><span>13</span><p>Maple butter, seasonal fruit</p></div>
+      <div class="dish"><h3>Smoked trout toast</h3><span>16</span><p>Herbed cream cheese, pickled shallot</p></div>
+      <div class="dish"><h3>Grill breakfast</h3><span>18</span><p>Two eggs, sausage, potatoes, toast</p></div>
+    </div>
+    <div class="panel" id="drinks">
+      <div class="dish"><h3>House red or white</h3><span>11</span><p>Rotating glass from a local vineyard</p></div>
+      <div class="dish"><h3>Smoked old fashioned</h3><span>14</span><p>Bourbon, maple, orange, oak smoke</p></div>
+      <div class="dish"><h3>Garden spritz</h3><span>10</span><p>Elderflower, cucumber, soda</p></div>
+      <div class="dish"><h3>Cold brew tonic</h3><span>6</span><p>Zero proof, bright and bitter</p></div>
+    </div>
+  </div></section>
+
+  <section class="reserve" id="reserve"><div class="wrap">
+    <div>
+      <h2 class="serif">Save your seat</h2>
+      <p style="color:var(--muted)">Book up to 30 days ahead. Walk-ins are always welcome at the bar.</p>
+      <ul class="info">
+        <li><b>Dinner</b>Tuesday to Sunday, 5 PM to 10 PM</li>
+        <li><b>Brunch</b>Saturday and Sunday, 10 AM to 2 PM</li>
+        <li><b>Phone</b>(555) 010-0163</li>
+      </ul>
+    </div>
+    <form onsubmit="event.preventDefault();document.getElementById('rn').textContent='Concept demo: no reservation was made.';">
+      <div><label for="d">Date</label><input id="d" type="date"></div>
+      <div><label for="t">Time</label><select id="t"><option>5:30 PM</option><option>6:30 PM</option><option>7:30 PM</option><option>8:30 PM</option></select></div>
+      <div class="full"><label for="g">Guests</label><select id="g"><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 or more</option></select></div>
+      <div class="full"><button class="btn solid" type="submit" style="width:100%">Find a table</button></div>
+      <p class="demo full" id="rn" aria-live="polite"></p>
+    </form>
+  </div></section>
+
+  <section class="events" id="events"><div class="wrap">
+    <h2 class="serif">Private dining for up to 40 guests</h2>
+    <p>Birthdays, rehearsal dinners and team nights, with a set menu built around your group.</p>
+    <a href="#reserve" class="btn">Plan an event</a>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span>Maple and Oak Bistro is a fictional business. Concept design by <a href="/">IronStack Studio</a>.</span><a href="/#work">See more concepts</a></div></footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected', x===b));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id===b.dataset.tab));
+}));
+</script>
+</body>
+</html>

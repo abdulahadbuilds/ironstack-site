@@ -1,0 +1,1473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IronStack Studio | Premium websites for small businesses</title>
+<meta name="description" content="IronStack Studio designs and builds premium websites, Shopify stores, custom CRMs and brand content for small businesses in the US and Canada. Free homepage mockup before you pay.">
+<meta property="og:title" content="IronStack Studio">
+<meta property="og:description" content="Websites that hold weight. Premium design and development for small businesses in the US and Canada.">
+<meta property="og:url" content="https://ironstackstudio.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IronStack Studio">
+<meta property="og:image" content="https://ironstackstudio.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IronStack Studio">
+<meta name="twitter:description" content="Websites that hold weight. Premium design and development for small businesses in the US and Canada.">
+<meta name="twitter:image" content="https://ironstackstudio.com/og.png">
+<link rel="canonical" href="https://ironstackstudio.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"IronStack Studio","url":"https://ironstackstudio.com/","email":"hello@ironstackstudio.com","telephone":"+923212995521","image":"https://ironstackstudio.com/og.png","description":"Premium websites, Shopify stores, custom CRMs and brand content for small businesses in the US and Canada.","areaServed":["US","CA"],"founder":{"@type":"Person","name":"Abdul Ahad","sameAs":["https://www.linkedin.com/in/abdul-ahad-wp/"]},"sameAs":["https://www.linkedin.com/in/abdul-ahad-wp/"],"priceRange":"$$"}
+</script>
+<meta name="theme-color" content="#14181F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314181F'/%3E%3Crect x='6' y='8' width='20' height='4' fill='%23D4A84B'/%3E%3Crect x='9' y='14' width='17' height='4' fill='%23E6E8EA'/%3E%3Crect x='6' y='20' width='14' height='4' fill='%238C949E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181F;
+  --ink-2:#1B2029;
+  --plate:#232934;
+  --line:#313846;
+  --steel:#8C949E;
+  --bone:#E6E8EA;
+  --white:#F5F6F7;
+  --brass:#D4A84B;
+  --brass-hi:#EBC56E;
+  --pad:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.7,0,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--ink);color:var(--bone);
+  font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:4px;border-radius:3px}
+::selection{background:var(--brass);color:var(--ink)}
+.skip{position:fixed;left:-999px;top:10px;z-index:1000;background:var(--brass);color:var(--ink);padding:10px 16px}
+.skip:focus{left:10px}
+
+/* grain */
+body::after{
+  content:"";position:fixed;inset:-50%;z-index:900;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* type */
+.x{font-stretch:125%;font-weight:850;letter-spacing:-.035em;line-height:.9}
+.c-mid{font-stretch:100%}
+.muted{color:var(--steel)}
+.small{font-size:.9rem}
+
+/* ---------- preloader ---------- */
+.loader{
+  position:fixed;inset:0;z-index:950;background:var(--ink);
+  display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad);
+}
+.loader-top{display:flex;justify-content:space-between;color:var(--steel);font-size:.9rem}
+.loader-stack{display:grid;gap:8px;width:min(340px,70vw)}
+.loader-stack i{display:block;height:14px;background:var(--plate);transform-origin:left;transform:scaleX(0)}
+.loader-stack i:nth-child(1){background:var(--brass)}
+.loader-stack i:nth-child(2){width:86%;margin-left:14%}
+.loader-stack i:nth-child(3){width:72%}
+.loader-bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.loader-num{font-size:clamp(5rem,16vw,13rem)}
+.no-anim .loader{display:none}
+
+/* ---------- cursor ---------- */
+.cursor,.cursor-dot{position:fixed;top:0;left:0;z-index:960;pointer-events:none;border-radius:50%;opacity:0}
+.cursor{
+  width:44px;height:44px;margin:-22px 0 0 -22px;border:1px solid rgba(230,232,234,.45);
+  display:grid;place-items:center;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s;
+}
+.cursor span{font-size:.72rem;font-weight:700;color:var(--ink);opacity:0;transition:opacity .2s}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--brass)}
+.cursor.is-hover{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--brass);border-color:var(--brass)}
+.cursor.is-hover span{opacity:1}
+.cursor.is-link{width:64px;height:64px;margin:-32px 0 0 -32px;border-color:var(--brass)}
+@media (pointer:fine){.has-cursor .cursor,.has-cursor .cursor-dot{opacity:1}}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:800;padding:22px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;color:var(--white);
+  transition:background .5s var(--ease),padding .5s var(--ease),border-color .5s;border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(20,24,31,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:14px;padding-bottom:14px;border-bottom-color:rgba(49,56,70,.6)}
+.nav .pill:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.logo{display:flex;align-items:center;gap:12px;font-stretch:125%;font-weight:850;font-size:1.15rem;letter-spacing:-.02em}
+.logo-mark{display:grid;gap:3px;width:24px}
+.logo-mark i{height:5px;background:var(--white)}
+.logo-mark i:nth-child(1){background:var(--brass)}
+.logo-mark i:nth-child(2){width:84%;margin-left:16%}
+.logo-mark i:nth-child(3){width:68%}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;font-size:.95rem}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:not(.pill)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav-links a:not(.pill):hover::after{transform:scaleX(1);transform-origin:left}
+.pill{border:1px solid currentColor;border-radius:999px;padding:10px 20px!important;font-weight:600}
+.menu-btn{display:none;font-weight:600}
+@media (max-width:900px){
+  .nav-links li:not(:last-child){display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--pad) 40px;overflow:hidden}
+#hero3d{position:absolute;inset:0;z-index:0}
+#hero3d canvas{display:block;width:100%!important;height:100%!important}
+.hero-glow{position:absolute;right:-10%;top:10%;width:70vw;height:70vw;max-width:900px;max-height:900px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,168,75,.16),transparent 60%);z-index:0;pointer-events:none}
+.hero-content{position:relative;z-index:2;pointer-events:none}
+.hero-content a,.hero-content button{pointer-events:auto}
+.hero h1{font-size:clamp(3rem,9.4vw,11.5rem);color:var(--white)}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .w{display:inline-block;white-space:nowrap}
+.hero h1 .c{display:inline-block;will-change:transform}
+.hero h1 .line:last-child{color:var(--brass);padding-left:9vw}
+.hero-row{display:grid;grid-template-columns:1fr auto auto;gap:40px;align-items:end;margin-top:44px;border-top:1px solid var(--line);padding-top:26px}
+.hero-row p{max-width:44ch;font-size:1.08rem;color:var(--bone)}
+.clocks{display:flex;gap:28px;font-size:.88rem;color:var(--steel)}
+.clocks b{display:block;color:var(--bone);font-weight:600;font-variant-numeric:tabular-nums}
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:14px;
+  background:var(--brass);color:var(--ink);border-radius:999px;padding:18px 28px;
+  font-weight:700;font-stretch:112%;white-space:nowrap;overflow:hidden;isolation:isolate;
+}
+.btn::before{content:"";position:absolute;inset:0;background:var(--white);border-radius:inherit;transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover::before{transform:none}
+.btn svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+.btn:hover svg{transform:rotate(-45deg)}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn-dark::before{background:var(--brass)}
+.btn-dark:hover{color:var(--ink)}
+.scroll-cue{position:absolute;right:var(--pad);top:50%;z-index:2;writing-mode:vertical-rl;font-size:.8rem;color:var(--steel);display:flex;align-items:center;gap:12px}
+.scroll-cue i{width:1px;height:60px;background:var(--line);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-30px;width:1px;height:30px;background:var(--brass);animation:cue 2s var(--ease) infinite}
+@keyframes cue{to{top:60px}}
+@media (max-width:900px){
+  .hero{justify-content:flex-end;padding-top:100px}
+  #hero3d{bottom:auto;height:58svh;top:60px}
+  .hero-row{grid-template-columns:1fr;gap:24px}
+  .scroll-cue{display:none}
+  .hero h1 .line:last-child{padding-left:0}
+}
+
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:26px 0;background:var(--ink-2)}
+.marquee-track{display:flex;width:max-content;gap:0;will-change:transform}
+.marquee span{display:flex;align-items:center;gap:40px;padding-right:40px;font-size:clamp(1.6rem,4vw,3.2rem);font-stretch:125%;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.marquee span em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--steel)}
+.marquee svg{width:.8em;height:.8em;flex:none}
+
+/* ---------- manifesto (light) ---------- */
+.light{background:var(--bone);color:var(--ink)}
+.manifesto{padding:clamp(100px,16vw,220px) var(--pad)}
+.manifesto-inner{display:grid;grid-template-columns:220px 1fr;gap:40px}
+.manifesto-label{font-weight:600;font-size:.95rem;padding-top:.6em}
+.manifesto p.big{font-size:clamp(1.9rem,4.4vw,4.1rem);line-height:1.08;font-stretch:108%;font-weight:600;letter-spacing:-.025em;max-width:22ch}
+.manifesto p.big .mw{opacity:.14;transition:none}
+.manifesto-foot{margin-top:60px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding-left:260px}
+.manifesto-foot p{max-width:46ch;color:#4A5260}
+@media (max-width:900px){
+  .manifesto-inner{grid-template-columns:1fr;gap:20px}
+  .manifesto-foot{padding-left:0}
+  .manifesto p.big{max-width:none}
+}
+
+/* ---------- services ---------- */
+.services{padding:clamp(100px,12vw,180px) 0 clamp(80px,10vw,140px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding:0 var(--pad);margin-bottom:64px}
+.sec-head h2{font-size:clamp(2.8rem,8vw,7.5rem);color:var(--white)}
+.sec-head p{max-width:36ch;color:var(--steel)}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.svc a{display:grid;grid-template-columns:1.3fr 1fr auto;gap:40px;align-items:center;padding:34px var(--pad);position:relative;z-index:1;transition:color .45s var(--ease)}
+.svc::before{content:"";position:absolute;inset:0;background:var(--brass);transform:translateY(101%);transition:transform .55s var(--ease)}
+.svc:hover::before,.svc:focus-within::before{transform:none}
+.svc:hover a,.svc:focus-within a{color:var(--ink)}
+.svc h3{font-size:clamp(1.8rem,4.6vw,4rem);font-stretch:125%;font-weight:800;letter-spacing:-.03em;line-height:1;transition:font-stretch .6s var(--ease)}
+.svc:hover h3{font-stretch:62%}
+.svc p{color:var(--steel);max-width:40ch;transition:color .45s}
+.svc:hover p,.svc:focus-within p{color:var(--ink)}
+.svc .arrow{width:56px;height:56px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .55s var(--ease),border-color .45s}
+.svc .arrow svg{width:18px;height:18px}
+.svc:hover .arrow{transform:rotate(-45deg);border-color:var(--ink)}
+.svc-preview{
+  position:fixed;top:0;left:0;z-index:700;width:300px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;
+  pointer-events:none;opacity:0;transform:scale(.6);box-shadow:0 30px 80px rgba(0,0,0,.45)
+}
+.svc-preview .pv{position:absolute;inset:0;opacity:0;transition:opacity .3s}
+.svc-preview .pv.on{opacity:1}
+@media (max-width:900px){
+  .sec-head{flex-direction:column;align-items:flex-start}
+  .svc a{grid-template-columns:1fr auto;gap:14px 20px}
+  .svc p{grid-column:1/-1;grid-row:2}
+  .svc-preview{display:none}
+}
+
+/* mini previews for services */
+.pv-web{background:linear-gradient(135deg,#1F2A44,#3B5B9A)}
+.pv-shop{background:linear-gradient(135deg,#F2E6D8,#E0B98F)}
+.pv-crm{background:#0F141B}
+.pv-logo{background:radial-gradient(circle at 50% 50%,#3A2F18,#14181F 70%)}
+.pv-social{background:linear-gradient(135deg,#E86A4A,#F2B33D)}
+.pv-video{background:linear-gradient(135deg,#111,#2B2F36)}
+.pv .ui{position:absolute;inset:14px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.pv-shop .ui{background:#fff;border-color:#eadccc}
+.pv .bar{position:absolute;left:12px;right:12px;height:8px;border-radius:4px;background:rgba(255,255,255,.35)}
+.pv-shop .bar{background:#E0CDB8}
+.pv .blk{position:absolute;border-radius:6px;background:rgba(255,255,255,.18)}
+.pv-shop .blk{background:#F2E6D8}
+
+/* ---------- work (horizontal) ---------- */
+.work{position:relative;background:var(--ink-2);overflow:hidden}
+.work-pin{height:100svh;display:flex;align-items:center}
+.work-track{display:flex;gap:clamp(24px,3vw,48px);padding:0 var(--pad);will-change:transform}
+.work-intro{flex:0 0 min(460px,80vw);display:flex;flex-direction:column;justify-content:center;gap:24px}
+.work-intro h2{font-size:clamp(2.8rem,6.5vw,6rem);color:var(--white)}
+.tag-note{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.88rem;color:var(--steel);align-self:flex-start}
+.tag-note i{width:8px;height:8px;border-radius:50%;background:var(--brass)}
+.project{flex:0 0 min(64vw,980px);display:flex;flex-direction:column;gap:20px}
+.project-meta{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.project-meta h3{font-size:clamp(1.5rem,2.8vw,2.4rem);font-stretch:118%;font-weight:800;letter-spacing:-.02em;color:var(--white)}
+.project-meta span{color:var(--steel);font-size:.92rem;text-align:right}
+.frame{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 40px 100px rgba(0,0,0,.35);aspect-ratio:16/10;display:flex;flex-direction:column;transform-origin:center}
+.frame-bar{height:34px;flex:none;background:#E9EBEE;display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame-bar i{width:10px;height:10px;border-radius:50%;background:#C9CDD2}
+.frame-bar b{margin-left:16px;flex:0 1 40%;height:16px;border-radius:5px;background:#fff;font-size:10px;font-weight:500;color:#8B929B;display:flex;align-items:center;padding:0 10px}
+.mock{flex:1;position:relative;overflow:hidden;font-size:clamp(7px,1vw,14px);background:var(--m-bg);color:var(--m-ink);display:flex;flex-direction:column;padding:2.2em 3em}
+.mock-nav{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:1.25em}
+.mock-nav ul{display:flex;gap:2em;list-style:none;font-weight:500;font-size:.8em;opacity:.75}
+.mock-nav .mbtn{font-size:.75em}
+.mbtn{display:inline-block;background:var(--m-acc);color:var(--m-acc-ink);padding:.9em 1.6em;border-radius:var(--m-r);font-weight:700}
+.mbtn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.mock-hero{flex:1;min-height:0;display:grid;grid-template-columns:1.05fr .95fr;gap:3em;align-items:stretch;padding-top:1.6em}
+.mock-hero > div:first-child{align-self:center}
+.mock-hero h4{font-size:3.2em;line-height:1;letter-spacing:-.03em;font-weight:var(--m-w);font-stretch:var(--m-s);margin-bottom:.45em}
+.mock-hero p{font-size:1.05em;opacity:.7;margin-bottom:1.6em;max-width:30ch}
+.mock-hero .btns{display:flex;gap:.8em}
+.mock-img{height:100%;min-height:8em;border-radius:var(--m-r2);background:var(--m-img);position:relative;overflow:hidden}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2em;margin-top:2em}
+.mock-cards div{border-radius:var(--m-r);background:var(--m-card);padding:1.1em 1.2em;font-size:.85em;font-weight:600}
+.mock-cards div small{display:block;font-weight:400;opacity:.6;margin-top:.3em}
+/* concept themes */
+.m-dental{--m-bg:#F4F8F9;--m-ink:#0E3442;--m-acc:#0E3442;--m-acc-ink:#fff;--m-r:999px;--m-r2:22px;--m-w:700;--m-s:100%;--m-card:#E3EEF1;
+  --m-img:radial-gradient(circle at 70% 30%,#BFE3EA,transparent 55%),linear-gradient(160deg,#8CCAD6,#2F7F93)}
+.m-plumb{--m-bg:#0F1A33;--m-ink:#fff;--m-acc:#F5B731;--m-acc-ink:#0F1A33;--m-r:6px;--m-r2:6px;--m-w:900;--m-s:118%;--m-card:#1B2A4F;
+  --m-img:repeating-linear-gradient(135deg,#1B2A4F 0 18px,#22345F 18px 36px)}
+.m-bistro{--m-bg:#2A1B14;--m-ink:#FBEEE1;--m-acc:#FBEEE1;--m-acc-ink:#2A1B14;--m-r:2px;--m-r2:200px 200px 4px 4px;--m-w:500;--m-s:82%;--m-card:#3B271D;
+  --m-img:radial-gradient(circle at 50% 60%,#E08A4F,#8A3E1E 55%,#3B1E12)}
+.m-shop{--m-bg:#F1ECE4;--m-ink:#1D1A17;--m-acc:#1D1A17;--m-acc-ink:#F1ECE4;--m-r:0;--m-r2:0;--m-w:400;--m-s:62%;--m-card:#E4DCD0;
+  --m-img:linear-gradient(180deg,#D9C7AE,#B89A78)}
+.m-shop .mock-hero h4{font-size:4.4em;text-transform:none}
+.mock-img .orb{position:absolute;width:40%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.35);right:12%;bottom:14%}
+.m-plumb .mock-img .orb{border-radius:0;background:#F5B731;width:30%;right:16%;bottom:20%;transform:rotate(12deg)}
+.m-shop .mock-img .orb{border-radius:40% 40% 8% 8%;background:#F1ECE4;width:34%;height:62%;aspect-ratio:auto;right:33%;bottom:0}
+a.frame{color:inherit;transition:box-shadow .4s}
+a.frame:hover{box-shadow:0 40px 100px rgba(0,0,0,.35),0 0 0 2px var(--brass)}
+.open-link{display:inline-block;margin-top:6px;color:var(--brass);font-weight:600;border-bottom:1px solid currentColor}
+.work-end{flex:0 0 min(420px,80vw);display:flex;flex-direction:column;justify-content:center;gap:28px}
+.work-end p{font-size:clamp(1.6rem,3vw,2.6rem);font-stretch:112%;font-weight:700;line-height:1.1;color:var(--white);letter-spacing:-.02em}
+@media (max-width:900px){
+  .work-pin{height:auto;padding:90px 0}
+  .work-track{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:20px;scrollbar-width:none}
+  .work-track::-webkit-scrollbar{display:none}
+  .project,.work-intro,.work-end{scroll-snap-align:start}
+  .project{flex-basis:86vw}
+  .mock{padding:1.6em 1.8em}
+  .mock-nav ul{display:none}
+  .mock-hero{grid-template-columns:1fr 1fr;gap:1.5em}
+  .mock-hero p{display:none}
+  .mock-cards{display:none}
+}
+
+/* ---------- process ---------- */
+.process{padding:clamp(100px,12vw,180px) var(--pad)}
+.process-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(40px,8vw,120px)}
+.process-sticky{position:sticky;top:120px;align-self:start}
+.process-sticky h2{font-size:clamp(2.8rem,7vw,6.5rem);color:var(--white);margin-bottom:28px}
+.process-sticky p{color:var(--steel);max-width:38ch}
+.steps{position:relative;list-style:none;padding-left:56px}
+.steps::before{content:"";position:absolute;left:12px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.steps .rail{position:absolute;left:12px;top:8px;bottom:8px;width:1px;background:var(--brass);transform-origin:top;transform:scaleY(0)}
+.step{position:relative;padding:0 0 clamp(60px,9vw,120px)}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-50px;top:.55em;width:13px;height:13px;border-radius:50%;background:var(--ink);border:1px solid var(--steel);transition:background .4s,border-color .4s}
+.step.on::before{background:var(--brass);border-color:var(--brass)}
+.step-n{font-size:clamp(4rem,9vw,8rem);color:transparent;-webkit-text-stroke:1px var(--line);display:block;margin-bottom:10px;transition:-webkit-text-stroke-color .4s,color .4s}
+.step.on .step-n{-webkit-text-stroke-color:var(--brass)}
+.step h3{font-size:clamp(1.6rem,2.6vw,2.2rem);font-stretch:118%;font-weight:800;letter-spacing:-.02em;color:var(--white);margin-bottom:12px}
+.step p{color:var(--steel);max-width:44ch;font-size:1.05rem}
+@media (max-width:900px){
+  .process-grid{grid-template-columns:1fr}
+  .process-sticky{position:static}
+}
+
+/* ---------- promises (light) ---------- */
+.promises{padding:clamp(100px,12vw,180px) var(--pad)}
+.promises h2{font-size:clamp(2.8rem,8vw,7.5rem);margin-bottom:clamp(50px,7vw,90px);max-width:12ch}
+.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #C9CDD2}
+.promise{padding:34px 28px 10px 0;border-right:1px solid #C9CDD2;margin-right:28px}
+.promise:last-child{border-right:0;margin-right:0}
+.promise svg{width:42px;height:42px;margin-bottom:60px}
+.promise h3{font-size:1.5rem;font-stretch:115%;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:12px}
+.promise p{color:#4A5260;font-size:.98rem}
+@media (max-width:1000px){
+  .promise-grid{grid-template-columns:1fr 1fr}
+  .promise:nth-child(2){border-right:0;margin-right:0}
+  .promise:nth-child(-n+2){border-bottom:1px solid #C9CDD2;padding-bottom:34px}
+}
+@media (max-width:600px){
+  .promise-grid{grid-template-columns:1fr}
+  .promise{border-right:0;margin-right:0;border-bottom:1px solid #C9CDD2;padding-bottom:34px}
+  .promise svg{margin-bottom:24px}
+}
+
+/* ---------- founder ---------- */
+.founder{padding:clamp(100px,12vw,180px) var(--pad);display:grid;grid-template-columns:auto 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.portrait{position:relative;width:clamp(240px,28vw,380px);border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0e1116}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.portrait::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(14,17,22,.92));pointer-events:none}
+.portrait figcaption{position:absolute;left:20px;right:20px;bottom:18px;z-index:1;display:flex;justify-content:space-between;align-items:baseline}
+.portrait figcaption b{font-stretch:118%;font-weight:800;font-size:1.15rem;color:var(--white)}
+.portrait figcaption span{font-size:.85rem;color:var(--brass);font-weight:600}
+@media (max-width:800px){.portrait{width:min(360px,100%)}}
+.monogram{width:clamp(180px,24vw,320px);aspect-ratio:3/4;border-radius:18px;background:linear-gradient(160deg,var(--plate),var(--ink-2));border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;padding:22px;position:relative;overflow:hidden}
+.monogram b{font-size:clamp(5rem,9vw,8rem);font-stretch:125%;font-weight:900;letter-spacing:-.05em;color:var(--brass);line-height:.8}
+.monogram span{font-size:.85rem;color:var(--steel)}
+.founder blockquote{font-size:clamp(1.6rem,3.2vw,2.9rem);line-height:1.15;font-stretch:105%;font-weight:600;letter-spacing:-.02em;color:var(--white);max-width:26ch}
+.founder cite{display:block;margin-top:28px;font-style:normal;color:var(--steel)}
+.founder cite b{color:var(--bone);font-weight:600}
+@media (max-width:800px){.founder{grid-template-columns:1fr}}
+
+/* ---------- faq ---------- */
+.faq{padding:0 var(--pad) clamp(100px,12vw,180px);display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(40px,7vw,100px)}
+.faq h2{font-size:clamp(2.6rem,6vw,5.5rem);color:var(--white)}
+.faq-list{border-top:1px solid var(--line)}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:28px 0;font-size:clamp(1.1rem,1.7vw,1.4rem);font-stretch:110%;font-weight:700;color:var(--white)}
+.qa .plus{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .5s var(--ease),background .4s,border-color .4s}
+.qa .plus::before,.qa .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.qa .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.qa.open .plus{transform:rotate(45deg);background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.qa .ans{height:0;overflow:hidden;transition:height .55s var(--ease)}
+.qa .ans p{padding:0 60px 28px 0;color:var(--steel);max-width:60ch}
+@media (max-width:900px){.faq{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--brass);color:var(--ink);padding:clamp(100px,12vw,170px) var(--pad) 0;position:relative;overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px)}
+.contact h2{font-size:clamp(3rem,8.5vw,8rem);margin-bottom:30px}
+.contact .lead{font-size:1.15rem;max-width:40ch;margin-bottom:34px}
+.contact .mail{font-size:clamp(1.2rem,2.2vw,1.8rem);font-weight:700;font-stretch:112%;border-bottom:2px solid var(--ink);padding-bottom:4px}
+form{display:grid;gap:26px;align-content:start}
+.field{position:relative}
+.field input,.field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(20,24,31,.35);
+  padding:26px 0 12px;font:inherit;font-size:1.15rem;color:var(--ink);border-radius:0;transition:border-color .3s
+}
+.field textarea{min-height:110px;resize:vertical}
+.field label{position:absolute;left:0;top:26px;font-size:1.15rem;color:rgba(20,24,31,.6);pointer-events:none;transition:transform .35s var(--ease),font-size .35s var(--ease),top .35s var(--ease)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--ink)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{top:0;font-size:.82rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.hidden{display:none}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:8px}
+.form-foot p{font-size:.9rem;opacity:.75;max-width:30ch}
+.giant{
+  margin-top:clamp(80px,10vw,140px);font-size:15vw;line-height:.74;font-stretch:125%;font-weight:900;letter-spacing:-.05em;
+  white-space:nowrap;text-align:center;color:var(--ink);user-select:none;margin-bottom:-.06em
+}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:22px var(--pad);background:var(--ink);color:var(--steel);font-size:.9rem}
+.foot a:hover{color:var(--bone)}
+@media (max-width:900px){
+  .contact-grid,.two{grid-template-columns:1fr}
+}
+
+/* ---------- pricing ---------- */
+.pricing{padding:clamp(100px,12vw,180px) 0}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0 var(--pad);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.plan{display:flex;flex-direction:column;padding:clamp(28px,3vw,44px);border-right:1px solid var(--line);background:var(--ink)}
+.plan:last-child{border-right:0}
+.plan.featured{background:linear-gradient(180deg,#2A2416,#1B2029 70%);box-shadow:inset 0 3px 0 var(--brass)}
+.plan-top{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:34px}
+.plan h3{font-size:1.5rem;font-stretch:118%;font-weight:800;letter-spacing:-.02em;color:var(--white)}
+.plan-flag{font-size:.78rem;font-weight:600;color:var(--ink);background:var(--brass);border-radius:999px;padding:5px 12px}
+.plan-price{font-size:clamp(3rem,5.4vw,4.8rem);color:var(--white);margin-top:28px;display:flex;align-items:flex-start;gap:10px}
+.plan-price small{font-size:.95rem;font-weight:500;font-stretch:100%;letter-spacing:0;color:var(--steel);margin-top:.7em}
+.featured .plan-price{color:var(--brass)}
+.plan-per{color:var(--steel);font-size:.9rem;margin-top:8px}
+.plan-desc{color:var(--bone);margin:22px 0 26px;min-height:3.1em}
+.plan ul{list-style:none;display:grid;gap:13px;margin-bottom:34px;flex:1;border-top:1px solid var(--line);padding-top:26px}
+.plan li{display:flex;gap:12px;align-items:flex-start;color:var(--bone);font-size:.98rem}
+.plan .tick{width:16px;height:16px;flex:none;margin-top:.25em;color:var(--brass)}
+.plan .btn{align-self:flex-start}
+.btn-ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-ghost::before{background:var(--brass)}
+.btn-ghost:hover{color:var(--ink)}
+.plans-note{margin:28px var(--pad) 0;color:var(--steel);max-width:70ch;font-size:.95rem}
+@media (max-width:1000px){
+  .plans{grid-template-columns:1fr}
+  .plan{border-right:0;border-bottom:1px solid var(--line)}
+  .plan:last-child{border-bottom:0}
+  .plan-desc{min-height:0}
+}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+/* ---------- assistant ---------- */
+.bot-launch{position:fixed;right:clamp(16px,2.5vw,32px);bottom:clamp(16px,2.5vw,32px);z-index:790;display:flex;align-items:center;gap:10px;
+  background:var(--brass);color:var(--ink);border-radius:999px;padding:12px 20px 12px 14px;font-weight:700;font-size:.95rem;
+  box-shadow:0 14px 40px rgba(0,0,0,.35);transition:transform .4s var(--ease),box-shadow .4s}
+.bot-launch:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.bot-launch .dot{width:30px;height:30px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.bot-launch .dot svg{width:16px;height:16px;color:var(--brass)}
+.bot-launch.hide,.bot-launch:not(.ready){visibility:hidden!important;opacity:0!important;pointer-events:none}
+.bot{position:fixed;right:clamp(16px,2.5vw,32px);bottom:clamp(16px,2.5vw,32px);z-index:850;width:min(390px,calc(100vw - 32px));height:min(600px,calc(100svh - 110px));
+  display:flex;flex-direction:column;background:var(--ink-2);border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,.55);transform-origin:bottom right;transform:scale(.85) translateY(20px);opacity:0;pointer-events:none;
+  transition:transform .45s var(--ease),opacity .3s}
+.bot.open{transform:none;opacity:1;pointer-events:auto}
+.bot-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);background:var(--ink)}
+.bot-head .av{width:38px;height:38px;border-radius:12px;background:var(--plate);display:grid;place-items:center}
+.bot-head .av span{display:grid;gap:3px;width:18px}
+.bot-head .av i{height:4px;background:var(--bone)}
+.bot-head .av i:nth-child(1){background:var(--brass)}
+.bot-head .av i:nth-child(2){width:84%;margin-left:16%}
+.bot-head .av i:nth-child(3){width:68%;background:var(--steel)}
+.bot-head b{display:block;color:var(--white);font-stretch:110%}
+.bot-head small{color:var(--steel);font-size:.8rem;display:flex;align-items:center;gap:6px}
+.bot-head small::before{content:"";width:7px;height:7px;border-radius:50%;background:#3DD68C}
+.bot-close{margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--bone)}
+.bot-close:hover{border-color:var(--brass);color:var(--brass)}
+.bot-log{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+.msg{max-width:86%;padding:11px 14px;border-radius:16px;font-size:.95rem;line-height:1.45;animation:msgIn .35s var(--ease)}
+.msg.b{background:var(--plate);color:var(--bone);border-bottom-left-radius:5px;align-self:flex-start}
+.msg.u{background:var(--brass);color:var(--ink);border-bottom-right-radius:5px;align-self:flex-end;font-weight:500}
+.msg a{color:var(--brass);text-decoration:underline}
+.msg b{color:var(--white)}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}}
+.typing{display:flex;gap:4px;padding:14px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--steel);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{50%{opacity:.25}}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 18px 12px}
+.chips button{border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:.84rem;color:var(--bone);transition:border-color .2s,color .2s}
+.chips button:hover{border-color:var(--brass);color:var(--brass)}
+.bot-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:var(--ink)}
+.bot-form input{flex:1;background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:12px 16px;color:var(--white);font:inherit;font-size:.95rem}
+.bot-form input:focus{outline:none;border-color:var(--brass)}
+.bot-form button{width:44px;height:44px;border-radius:50%;background:var(--brass);color:var(--ink);display:grid;place-items:center;flex:none}
+.bot-form button svg{width:18px;height:18px}
+.bot-note{font-size:.72rem;color:var(--steel);text-align:center;padding:0 0 10px;background:var(--ink)}
+@media (max-width:600px){.bot-launch span.lbl{display:none}.bot-launch{padding:12px}}
+.foot{padding-right:calc(var(--pad) + 230px)}
+@media (max-width:600px){.foot{padding-right:90px}}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .manifesto p.big .mw{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader-top"><span>IronStack Studio</span><span>Websites that hold weight</span></div>
+  <div class="loader-stack"><i></i><i></i><i></i></div>
+  <div class="loader-bottom">
+    <span class="muted small">Forging the experience</span>
+    <span class="loader-num x">0</span>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Main">
+  <a href="#top" class="logo" aria-label="IronStack Studio home" data-link>
+    <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>IronStack
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services" data-link>Services</a></li>
+    <li><a href="#work" data-link>Work</a></li>
+    <li><a href="#process" data-link>Process</a></li>
+    <li><a href="#pricing" data-link>Pricing</a></li>
+    <li><a href="#faq" data-link>FAQ</a></li>
+    <li><a href="#contact" class="pill magnetic" data-link>Let's talk</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div id="hero3d" aria-hidden="true"></div>
+    <div class="scroll-cue" aria-hidden="true">Scroll <i></i></div>
+    <div class="hero-content">
+      <h1 class="x" aria-label="Websites that hold weight.">
+        <span class="line split" aria-hidden="true">Websites that</span>
+        <span class="line split" aria-hidden="true">hold weight.</span>
+      </h1>
+      <div class="hero-row">
+        <p class="reveal">IronStack Studio designs and builds premium websites, online stores and brand content for small businesses across the US and Canada.</p>
+        <div class="clocks reveal" aria-label="Working in your time zone">
+          <div>New York<b id="t-ny">--:--</b></div>
+          <div>Vancouver<b id="t-van">--:--</b></div>
+        </div>
+        <a href="#contact" class="btn magnetic reveal" data-link>Get a free homepage mockup
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Websites <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg> <em>Shopify</em> <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg> Custom CRM <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg> <em>Logo animation</em> <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg> Social content <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg> <em>Video editing</em> <svg viewBox="0 0 20 20"><rect y="2" width="20" height="4" fill="#D4A84B"/><rect x="4" y="8" width="16" height="4" fill="#E6E8EA"/><rect y="14" width="14" height="4" fill="#8C949E"/></svg></span>
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="light manifesto">
+    <div class="manifesto-inner">
+      <div class="manifesto-label">Why we exist</div>
+      <p class="big" id="manifesto">Most small business websites are slow, dated and quietly losing customers. We build sites that load fast, look the part and make it effortless to call, book or buy.</p>
+    </div>
+    <div class="manifesto-foot">
+      <p>Your customers judge your business in a few seconds on their phone. We make sure those seconds work in your favor.</p>
+      <a href="#work" class="btn btn-dark magnetic" data-link>See our concepts
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="sec-head">
+      <h2 class="x">What we<br>build</h2>
+      <p>Start with a website. Add the rest when you are ready. One team, one point of contact, no juggling freelancers.</p>
+    </div>
+    <ul class="svc-list">
+      <li class="svc" data-pv="web"><a href="#contact" data-link>
+        <h3>Websites</h3><p>Fast, mobile-first sites on WordPress or custom code, designed to turn visitors into calls and bookings.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+      <li class="svc" data-pv="shop"><a href="#contact" data-link>
+        <h3>Shopify stores</h3><p>Store setup, custom theme design and product pages that sell on any screen.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+      <li class="svc" data-pv="crm"><a href="#contact" data-link>
+        <h3>Custom CRM</h3><p>A system built around how your team works, to track leads, customers and follow-ups in one place.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+      <li class="svc" data-pv="logo"><a href="#contact" data-link>
+        <h3>Logo animation</h3><p>Animated versions of your logo for videos, ads, social media and your website.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+      <li class="svc" data-pv="social"><a href="#contact" data-link>
+        <h3>Social content</h3><p>On-brand posts for Instagram and Facebook, designed and ready to publish.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+      <li class="svc" data-pv="video"><a href="#contact" data-link>
+        <h3>Video editing</h3><p>Reels, promos and ad videos cut from your own footage.</p>
+        <span class="arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span></a></li>
+    </ul>
+  </section>
+
+  <div class="svc-preview" aria-hidden="true">
+    <div class="pv pv-web" data-pv="web"><div class="ui"><span class="bar" style="top:14px;width:40%"></span><span class="blk" style="left:12px;top:40px;width:55%;height:22px"></span><span class="blk" style="left:12px;top:70px;width:40%;height:10px"></span><span class="blk" style="right:12px;top:40px;width:30%;height:110px;background:rgba(212,168,75,.6)"></span><span class="blk" style="left:12px;top:96px;width:28%;height:20px;background:#D4A84B;border-radius:20px"></span></div></div>
+    <div class="pv pv-shop" data-pv="shop"><div class="ui"><span class="bar" style="top:14px;width:30%"></span><span class="blk" style="left:12px;top:40px;width:28%;height:110px"></span><span class="blk" style="left:38%;top:40px;width:28%;height:110px"></span><span class="blk" style="right:12px;top:40px;width:28%;height:110px"></span></div></div>
+    <div class="pv pv-crm" data-pv="crm"><div class="ui"><span class="blk" style="left:10px;top:10px;bottom:10px;width:22%"></span><span class="bar" style="left:30%;top:16px;width:40%"></span><span class="blk" style="left:30%;top:38px;right:10px;height:16px"></span><span class="blk" style="left:30%;top:60px;right:10px;height:16px"></span><span class="blk" style="left:30%;top:82px;right:10px;height:16px;background:rgba(212,168,75,.55)"></span><span class="blk" style="left:30%;top:104px;right:10px;height:16px"></span></div></div>
+    <div class="pv pv-logo" data-pv="logo"><svg viewBox="0 0 300 225" style="position:absolute;inset:0"><rect x="95" y="70" width="110" height="18" fill="#D4A84B"/><rect x="113" y="96" width="92" height="18" fill="#E6E8EA"/><rect x="95" y="122" width="76" height="18" fill="#8C949E"/></svg></div>
+    <div class="pv pv-social" data-pv="social"><div class="ui" style="background:rgba(255,255,255,.2)"><span class="blk" style="left:12px;top:12px;width:44%;bottom:12px;background:rgba(255,255,255,.45)"></span><span class="blk" style="right:12px;top:12px;width:44%;height:44%;background:rgba(255,255,255,.3)"></span><span class="blk" style="right:12px;bottom:12px;width:44%;height:44%;background:rgba(255,255,255,.3)"></span></div></div>
+    <div class="pv pv-video" data-pv="video"><div class="ui"><svg viewBox="0 0 100 100" style="position:absolute;left:50%;top:42%;width:50px;transform:translate(-50%,-50%)"><circle cx="50" cy="50" r="46" fill="none" stroke="#D4A84B" stroke-width="3"/><path d="M42 33l26 17-26 17z" fill="#D4A84B"/></svg><span class="blk" style="left:12px;right:12px;bottom:14px;height:6px"></span><span class="blk" style="left:12px;width:40%;bottom:14px;height:6px;background:#D4A84B"></span></div></div>
+  </div>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="work-pin">
+      <div class="work-track">
+        <div class="work-intro">
+          <h2 class="x">Selected<br>concepts</h2>
+          <p class="muted">Four complete concept websites we designed and built for the kinds of businesses we work with. Open any one and click around, they all work.</p>
+          <span class="tag-note"><i></i>Concept designs, not client projects</span>
+        </div>
+
+        <article class="project" data-cursor="Open">
+          <div class="project-meta"><h3>Harborview Dental</h3><span>Concept / Dental clinic, online booking<br><a class="open-link" href="/work/harborview-dental" target="_blank" rel="noopener">Open live concept</a></span></div>
+          <a class="frame" href="/work/harborview-dental" target="_blank" rel="noopener" aria-label="Open the Harborview Dental concept website"><div class="frame-bar"><i></i><i></i><i></i><b>harborviewdental.com</b></div>
+            <div class="mock m-dental">
+              <div class="mock-nav">Harborview<ul><li>Services</li><li>Our team</li><li>Insurance</li></ul><span class="mbtn">Book a visit</span></div>
+              <div class="mock-hero"><div><h4>Gentle care for the whole family.</h4><p>Same-week appointments, most insurance accepted, and a team that explains everything.</p><div class="btns"><span class="mbtn">Book online</span><span class="mbtn ghost">Call us</span></div></div><div class="mock-img"><span class="orb"></span></div></div>
+              <div class="mock-cards"><div>Cleanings<small>From your first visit</small></div><div>Invisalign<small>Free consultation</small></div><div>Emergencies<small>Same-day slots</small></div></div>
+            </div></a>
+        </article>
+
+        <article class="project" data-cursor="Open">
+          <div class="project-meta"><h3>Northline Plumbing</h3><span>Concept / Home services, tap-to-call<br><a class="open-link" href="/work/northline-plumbing" target="_blank" rel="noopener">Open live concept</a></span></div>
+          <a class="frame" href="/work/northline-plumbing" target="_blank" rel="noopener" aria-label="Open the Northline Plumbing concept website"><div class="frame-bar"><i></i><i></i><i></i><b>northlineplumbing.com</b></div>
+            <div class="mock m-plumb">
+              <div class="mock-nav">NORTHLINE<ul><li>Repairs</li><li>Water heaters</li><li>Areas</li></ul><span class="mbtn">Call now</span></div>
+              <div class="mock-hero"><div><h4>Same-day plumbing. Fixed upfront prices.</h4><p>Licensed plumbers on the road seven days a week. You approve the price before we start.</p><div class="btns"><span class="mbtn">Get a quote</span><span class="mbtn ghost">Our prices</span></div></div><div class="mock-img"><span class="orb"></span></div></div>
+              <div class="mock-cards"><div>Leaks and clogs<small>Most fixed in one visit</small></div><div>Water heaters<small>Repair or replace</small></div><div>Emergencies<small>Answered 24/7</small></div></div>
+            </div></a>
+        </article>
+
+        <article class="project" data-cursor="Open">
+          <div class="project-meta"><h3>Maple and Oak Bistro</h3><span>Concept / Restaurant, menu and ordering<br><a class="open-link" href="/work/maple-and-oak" target="_blank" rel="noopener">Open live concept</a></span></div>
+          <a class="frame" href="/work/maple-and-oak" target="_blank" rel="noopener" aria-label="Open the Maple and Oak Bistro concept website"><div class="frame-bar"><i></i><i></i><i></i><b>mapleandoak.ca</b></div>
+            <div class="mock m-bistro">
+              <div class="mock-nav">Maple and Oak<ul><li>Menu</li><li>Private dining</li><li>Visit</li></ul><span class="mbtn">Reserve</span></div>
+              <div class="mock-hero"><div><h4>Seasonal plates, cooked over fire.</h4><p>A neighborhood bistro with a short menu that changes with the market.</p><div class="btns"><span class="mbtn">Book a table</span><span class="mbtn ghost">Order pickup</span></div></div><div class="mock-img"><span class="orb"></span></div></div>
+              <div class="mock-cards"><div>Dinner<small>Tuesday to Sunday</small></div><div>Brunch<small>Weekends</small></div><div>Events<small>Up to 40 guests</small></div></div>
+            </div></a>
+        </article>
+
+        <article class="project" data-cursor="Open">
+          <div class="project-meta"><h3>Ember Goods</h3><span>Concept / Shopify store, home goods<br><a class="open-link" href="/work/ember-goods" target="_blank" rel="noopener">Open live concept</a></span></div>
+          <a class="frame" href="/work/ember-goods" target="_blank" rel="noopener" aria-label="Open the Ember Goods concept website"><div class="frame-bar"><i></i><i></i><i></i><b>embergoods.com</b></div>
+            <div class="mock m-shop">
+              <div class="mock-nav">EMBER GOODS<ul><li>Shop</li><li>Collections</li><li>Journal</li></ul><span class="mbtn">Cart (0)</span></div>
+              <div class="mock-hero"><div><h4>Made slowly. Built to last.</h4><p>Handmade ceramics and linens from small studios, shipped across North America.</p><div class="btns"><span class="mbtn">Shop new arrivals</span></div></div><div class="mock-img"><span class="orb"></span></div></div>
+              <div class="mock-cards"><div>Ceramics<small>48 pieces</small></div><div>Linen<small>22 pieces</small></div><div>Gift cards<small>Any amount</small></div></div>
+            </div></a>
+        </article>
+
+        <div class="work-end">
+          <p>Want to see what yours could look like?</p>
+          <a href="#contact" class="btn magnetic" data-link>Request your free mockup
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="process-grid">
+      <div class="process-sticky">
+        <h2 class="x">How it<br>works</h2>
+        <p>Four steps from first message to a live site. You see the design before you pay anything, and you always know what happens next.</p>
+      </div>
+      <ol class="steps">
+        <span class="rail" aria-hidden="true"></span>
+        <li class="step"><span class="step-n x">01</span><h3>Free mockup</h3><p>Tell us about your business. We design a homepage mockup for you, at no cost and with no commitment.</p></li>
+        <li class="step"><span class="step-n x">02</span><h3>Fixed price</h3><p>We walk through the mockup together on a short call, agree on pages and features, and give you one price in writing.</p></li>
+        <li class="step"><span class="step-n x">03</span><h3>Build</h3><p>We build your site and share progress links along the way, so your feedback shapes the result.</p></li>
+        <li class="step"><span class="step-n x">04</span><h3>Launch</h3><p>We put it live on your domain, test it on phones and computers, and show you how to update it yourself.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="sec-head">
+      <h2 class="x">Clear<br>pricing</h2>
+      <p>Every project starts with a free homepage mockup. After a short call you get one fixed price in writing, so you always know what you pay.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <div class="plan-top"><h3>One Page</h3></div>
+        <p class="plan-price x">$500</p>
+        <p class="plan-per">one-time, USD</p>
+        <p class="plan-desc">A single, polished page with everything a small business needs to get calls.</p>
+        <ul><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>One scrolling page with all key sections</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Mobile-first custom design</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Contact form and tap-to-call</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Basic on-page SEO</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Google Business Profile link-up</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>14 days of post-launch fixes</li></ul>
+        <a href="#contact" class="btn btn-ghost magnetic" data-link>Start with a free mockup <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </article>
+      <article class="plan featured">
+        <div class="plan-top"><h3>Business</h3><span class="plan-flag">Recommended</span></div>
+        <p class="plan-price x">$1,000</p>
+        <p class="plan-per">one-time, USD</p>
+        <p class="plan-desc">A full 5-page website for businesses that want more customers online.</p>
+        <ul><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Up to 5 pages (Home, About, Services, Gallery, Contact)</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Fully custom design and animations</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Online booking, quote form or blog</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Speed and SEO optimization</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Easy editing on WordPress</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>30 days of post-launch support</li></ul>
+        <a href="#contact" class="btn magnetic" data-link>Start with a free mockup <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </article>
+      <article class="plan">
+        <div class="plan-top"><h3>Custom</h3></div>
+        <p class="plan-price x">Quote</p>
+        <p class="plan-per">priced per project</p>
+        <p class="plan-desc">For online stores, larger sites and anything that needs custom features.</p>
+        <ul><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Shopify store or custom web app</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>More than 5 pages</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Custom CRM or lead tracking</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Logo animation, social posts and video</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Integrations with your tools</li><li><svg class="tick" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8"/></svg>Support plan tailored to you</li></ul>
+        <a href="#contact" class="btn btn-ghost magnetic" data-link>Get a custom quote <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </article>
+    </div>
+    <p class="plans-note">All prices are confirmed in writing after your free mockup call, before any work begins. Need social media posts, video editing or monthly updates? Ask for a custom quote.</p>
+  </section>
+
+  <!-- PROMISES -->
+  <section class="light promises">
+    <h2 class="x">What you can count on</h2>
+    <div class="promise-grid">
+      <div class="promise">
+        <svg viewBox="0 0 42 42" fill="none"><rect x="1" y="7" width="40" height="28" rx="3" stroke="#14181F" stroke-width="2"/><path d="M1 14h40" stroke="#14181F" stroke-width="2"/><rect x="7" y="20" width="16" height="9" fill="#D4A84B"/></svg>
+        <h3>Design before you pay</h3><p>Your free homepage mockup comes first. If you do not like it, you owe nothing.</p>
+      </div>
+      <div class="promise">
+        <svg viewBox="0 0 42 42" fill="none"><path d="M8 3h20l8 8v28H8z" stroke="#14181F" stroke-width="2"/><path d="M14 20h14M14 27h10" stroke="#14181F" stroke-width="2"/><circle cx="31" cy="33" r="7" fill="#D4A84B"/></svg>
+        <h3>One price, in writing</h3><p>A fixed quote agreed before work starts. No hourly surprises.</p>
+      </div>
+      <div class="promise">
+        <svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="19" stroke="#14181F" stroke-width="2"/><path d="M21 9v12l8 5" stroke="#14181F" stroke-width="2"/><circle cx="21" cy="21" r="3" fill="#D4A84B"/></svg>
+        <h3>Your hours, not ours</h3><p>Calls and updates happen during your business day, Eastern to Pacific.</p>
+      </div>
+      <div class="promise">
+        <svg viewBox="0 0 42 42" fill="none"><rect x="6" y="18" width="30" height="21" rx="3" stroke="#14181F" stroke-width="2"/><path d="M13 18v-6a8 8 0 0 1 16 0v6" stroke="#14181F" stroke-width="2"/><rect x="18" y="25" width="6" height="8" fill="#D4A84B"/></svg>
+        <h3>You own everything</h3><p>Your domain, your website and all the files are yours. No lock-in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder">
+    <figure class="portrait">
+      <picture><source srcset="img/abdul-ahad.webp" type="image/webp"><img src="img/abdul-ahad.jpg" width="720" height="960" alt="Abdul Ahad, founder of IronStack Studio" loading="lazy"></picture>
+      <figcaption><b>Abdul Ahad</b><span>Founder</span></figcaption>
+    </figure>
+    <div>
+      <blockquote class="reveal">"I started IronStack because good design should not be reserved for big companies. A local business deserves a website that feels just as solid as the work it does."</blockquote>
+      <cite class="reveal"><b>Abdul Ahad</b>, founder and lead developer. Working remotely from Pakistan with clients across the US and Canada. <a href="https://www.linkedin.com/in/abdul-ahad-wp/" target="_blank" rel="noopener" style="color:var(--brass);text-decoration:underline">View my LinkedIn</a></cite>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2 class="x">Good<br>questions</h2>
+    <div class="faq-list">
+      <div class="qa"><button aria-expanded="false">Is the mockup really free?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>Yes. We design a homepage mockup based on your business. If you like it, we talk about building the full site. If not, you owe nothing.</p></div></div>
+      <div class="qa"><button aria-expanded="false">How much does a website cost?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>A one-page website is $500 and a 5-page website is $1,000. Stores and custom projects are quoted individually. See the pricing section above for what each package includes. After the mockup call you get one fixed price in writing, so there are no surprises later.</p></div></div>
+      <div class="qa"><button aria-expanded="false">How long does it take?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>Most small business websites take two to four weeks from approval to launch, depending on how quickly content and feedback come in.</p></div></div>
+      <div class="qa"><button aria-expanded="false">Where are you located?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>We are based in Pakistan and work remotely with clients in the US and Canada. Calls and updates are scheduled during your business hours.</p></div></div>
+      <div class="qa"><button aria-expanded="false">Can I update the website myself?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>Yes. WordPress and Shopify sites come with a short walkthrough so you can change text, photos and prices on your own.</p></div></div>
+      <div class="qa"><button aria-expanded="false">I already have a website. Can you improve it?<span class="plus" aria-hidden="true"></span></button><div class="ans"><p>Yes. Sometimes a redesign is right, and sometimes a few fixes to speed, mobile layout and contact buttons are enough. We will tell you honestly which one you need.</p></div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-grid">
+      <div>
+        <h2 class="x">Let's build something solid.</h2>
+        <p class="lead">Tell us about your business and we will send your free homepage mockup. We reply within one business day.</p>
+        <a class="mail" href="mailto:hello@ironstackstudio.com" data-link>hello@ironstackstudio.com</a>
+        <p style="margin-top:22px;font-weight:600"><a href="https://wa.me/923212995521?text=Hi%20IronStack%2C%20I%27d%20like%20a%20free%20homepage%20mockup%20for%20my%20business." target="_blank" rel="noopener" style="border-bottom:1.5px solid var(--ink)">WhatsApp +92 321 2995521</a></p>
+        <p style="margin-top:12px;font-weight:600"><a href="https://www.linkedin.com/in/abdul-ahad-wp/" target="_blank" rel="noopener" style="border-bottom:1.5px solid var(--ink)">Connect on LinkedIn</a></p>
+      </div>
+      <form name="mockup-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?sent=1#contact">
+        <input type="hidden" name="form-name" value="mockup-request">
+        <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
+        <div class="two">
+          <div class="field"><input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required><label for="f-name">Your name</label></div>
+          <div class="field"><input id="f-biz" name="business" type="text" autocomplete="organization" placeholder=" " required><label for="f-biz">Business name</label></div>
+        </div>
+        <div class="two">
+          <div class="field"><input id="f-email" name="email" type="email" autocomplete="email" placeholder=" " required><label for="f-email">Email</label></div>
+          <div class="field"><input id="f-site" name="website" type="text" inputmode="url" placeholder=" "><label for="f-site">Current website (if any)</label></div>
+        </div>
+        <div class="field"><textarea id="f-msg" name="message" placeholder=" "></textarea><label for="f-msg">What should your website do better?</label></div>
+        <div class="form-foot">
+          <p id="form-note">No spam. Your details are only used to reply to this request. See our <a href="/privacy" style="text-decoration:underline">privacy policy</a>.</p>
+          <button type="submit" class="btn btn-dark magnetic">Request my free mockup
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="giant x" aria-hidden="true">IRONSTACK</div>
+  </section>
+</main>
+
+<button class="bot-launch" aria-controls="bot" aria-expanded="false" type="button"><span class="dot"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span><span class="lbl">Ask us anything</span></button>
+<section class="bot" id="bot" role="dialog" aria-label="IronStack assistant" aria-hidden="true">
+  <div class="bot-head">
+    <span class="av" aria-hidden="true"><span><i></i><i></i><i></i></span></span>
+    <div><b>IronStack assistant</b><small>Instant answers</small></div>
+    <button class="bot-close" type="button" aria-label="Close chat"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.8"/></svg></button>
+  </div>
+  <div class="bot-log" data-lenis-prevent aria-live="polite"></div>
+  <div class="chips" data-lenis-prevent></div>
+  <form class="bot-form"><input type="text" placeholder="Type your question..." aria-label="Your question" autocomplete="off"><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2"/></svg></button></form>
+  <p class="bot-note">Automated assistant with instant answers about websites and pricing.</p>
+</section>
+
+<footer class="foot">
+  <span>&copy; <span id="year">2026</span> IronStack Studio</span>
+  <span class="foot-links"><a href="https://www.linkedin.com/in/abdul-ahad-wp/" target="_blank" rel="noopener">LinkedIn</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:hello@ironstackstudio.com">hello@ironstackstudio.com</a></span>
+  <a href="#top" data-link>Back to top</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(pointer:fine)').matches;
+  const hasGsap = !!(window.gsap && window.ScrollTrigger);
+  const root = document.documentElement;
+  if (!hasGsap || reduce) root.classList.add('no-anim');
+
+  /* small utils */
+  try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(e){}
+  try {
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      const n = document.getElementById('form-note');
+      n.textContent = 'Request sent. We will reply within one business day.';
+      n.style.fontWeight = '700';
+    }
+  } catch(e){}
+
+  /* fit the giant footer word to the page width */
+  function fitGiant(){
+    const g = document.querySelector('.giant'); if (!g) return;
+    const prev = g.style.fontVariationSettings;
+    g.style.fontVariationSettings = "'wdth' 125"; g.style.fontSize = '100px'; g.style.display = 'inline-block';
+    const cs = getComputedStyle(g.parentElement);
+    const avail = g.parentElement.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    const w = g.getBoundingClientRect().width;
+    g.style.display = '';
+    g.style.fontSize = Math.floor(100 * avail / w * .99) + 'px';
+    g.style.fontVariationSettings = prev;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(()=>{ fitGiant(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
+  fitGiant(); window.addEventListener('resize', fitGiant);
+  /* nav state without animation libs */
+  const navEl = document.querySelector('.nav');
+  const navState = ()=>navEl.classList.toggle('scrolled', window.scrollY > 80);
+  window.addEventListener('scroll', navState, {passive:true}); navState();
+
+  /* clocks */
+  function tick(){
+    const f = tz => new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:tz}).format(new Date());
+    try{
+      document.getElementById('t-ny').textContent = f('America/New_York');
+      document.getElementById('t-van').textContent = f('America/Vancouver');
+    }catch(e){}
+  }
+  tick(); setInterval(tick, 20000);
+
+  /* split hero headline */
+  document.querySelectorAll('.split').forEach(el=>{
+    const words = el.textContent.trim().split(/\s+/);
+    el.innerHTML = words.map(w=>'<span class="w">'+[...w].map(c=>'<span class="c">'+c+'</span>').join('')+'</span>').join(' ');
+  });
+  /* split manifesto words */
+  const man = document.getElementById('manifesto');
+  if (man){
+    man.innerHTML = man.textContent.trim().split(/\s+/).map(w=>'<span class="mw">'+w+'</span>').join(' ');
+  }
+
+  /* FAQ accordion */
+  document.querySelectorAll('.qa').forEach(qa=>{
+    const btn = qa.querySelector('button'), ans = qa.querySelector('.ans');
+    btn.addEventListener('click', ()=>{
+      const open = qa.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      ans.style.height = open ? ans.scrollHeight + 'px' : '0px';
+      if (window.ScrollTrigger) setTimeout(()=>ScrollTrigger.refresh(), 600);
+    });
+  });
+
+  /* ---------- 3D hero ---------- */
+  let hero3d = null;
+  function initHero3D(){
+    const wrap = document.getElementById('hero3d');
+    if (!window.THREE || !wrap) return null;
+    let renderer;
+    try { renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, powerPreference:'high-performance'}); }
+    catch(e){ return null; }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    wrap.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(32, 1, .1, 100);
+    camera.position.set(0, 1.2, 13);
+
+    // studio environment for metal reflections
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    const env = new THREE.Scene();
+    env.add(new THREE.Mesh(new THREE.BoxGeometry(30,30,30), new THREE.MeshBasicMaterial({color:0x1c222c, side:THREE.BackSide})));
+    function panel(w,h,color,x,y,z){
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(w,h), new THREE.MeshBasicMaterial({color, side:THREE.DoubleSide}));
+      m.position.set(x,y,z); m.lookAt(0,0,0); env.add(m);
+    }
+    panel(16,4,0xffffff,0,10,2);
+    panel(5,14,0xdde5ef,-11,2,5);
+    panel(6,12,0xffc46b,11,1,-2);
+    panel(18,3,0xffffff,0,-3,12);
+    panel(4,14,0xffffff,-6,0,11);
+    panel(10,8,0x8a97ab,0,4,-12);
+    scene.environment = pmrem.fromScene(env, .03).texture;
+
+    const key = new THREE.DirectionalLight(0xffffff, 1.2); key.position.set(4,8,6); scene.add(key);
+    const rim = new THREE.DirectionalLight(0xffc978, 1.4); rim.position.set(-6,2,-6); scene.add(rim);
+    scene.add(new THREE.AmbientLight(0x404858, .6));
+
+    const group = new THREE.Group();
+    scene.add(group);
+    const mats = [
+      new THREE.MeshStandardMaterial({color:0xffb12e, metalness:1, roughness:.2, envMapIntensity:1.5}),
+      new THREE.MeshStandardMaterial({color:0xb9c1cb, metalness:1, roughness:.16, envMapIntensity:1.3}),
+      new THREE.MeshStandardMaterial({color:0x8f99a6, metalness:1, roughness:.3,  envMapIntensity:1.3}),
+      new THREE.MeshStandardMaterial({color:0xa3acb7, metalness:1, roughness:.22, envMapIntensity:1.3}),
+      new THREE.MeshStandardMaterial({color:0x6a737f, metalness:1, roughness:.36, envMapIntensity:1.2}),
+      new THREE.MeshStandardMaterial({color:0x96a0ac, metalness:1, roughness:.26, envMapIntensity:1.2})
+    ];
+    const slabs = [];
+    const N = 6, gap = .62;
+    for (let i=0;i<N;i++){
+      const w = 4.2 - (i%3)*.35, d = 2.6 - (i%2)*.3;
+      const geo = new THREE.BoxGeometry(w, .38, d);
+      const mesh = new THREE.Mesh(geo, mats[i]);
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({color:0xebc56e, transparent:true, opacity: i===0 ? .0 : .18}));
+      mesh.add(edges);
+      const by = (N-1-i)*gap - ((N-1)*gap)/2;   // i=0 on top
+      mesh.userData = {by, bx:(i%2? .35:-.25)*(1+i*.15), bry:(i%2? 1:-1)*(.08+i*.05)};
+      mesh.position.set(mesh.userData.bx, by, 0);
+      mesh.rotation.y = mesh.userData.bry;
+      group.add(mesh); slabs.push(mesh);
+    }
+    group.rotation.set(.32, -.55, 0);
+
+    const state = {mx:0, my:0, tx:0, ty:0, scroll:0, drop:reduce?1:0, running:true};
+    function layout(){
+      const r = wrap.getBoundingClientRect();
+      const w = Math.max(1, r.width), h = Math.max(1, r.height);
+      renderer.setSize(w, h, false);
+      camera.aspect = w/h; camera.updateProjectionMatrix();
+      const mobile = window.innerWidth < 900;
+      group.position.x = mobile ? .3 : 3.9;
+      group.position.y = mobile ? 1.9 : 1.55;
+      group.scale.setScalar(mobile ? .58 : .8);
+    }
+    layout(); window.addEventListener('resize', layout);
+    window.addEventListener('pointermove', e=>{
+      state.tx = (e.clientX/window.innerWidth - .5);
+      state.ty = (e.clientY/window.innerHeight - .5);
+    });
+
+    const clock = new THREE.Clock();
+    function render(){
+      if (!state.running) return;
+      const t = clock.getElapsedTime();
+      state.mx += (state.tx - state.mx)*.05;
+      state.my += (state.ty - state.my)*.05;
+      const s = state.scroll;
+      slabs.forEach((m,i)=>{
+        const u = m.userData;
+        const dropOff = (1 - Math.min(1, Math.max(0, state.drop*1.6 - (N-1-i)*.12))) * 9;
+        m.position.y = u.by + dropOff + s*(i - (N-1)/2)*-1.1 + Math.sin(t*.8 + i)*.035;
+        m.position.x = u.bx + s*(i%2? 1:-1)*(1.2+i*.25);
+        m.rotation.y = u.bry + s*(i%2? .9:-.7) + Math.sin(t*.5+i)*.02;
+        m.rotation.z = s*(i%2? .18:-.14);
+      });
+      group.rotation.y = -.55 + t*.06 + state.mx*.5;
+      group.rotation.x = .32 + state.my*.25;
+      renderer.render(scene, camera);
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
+
+    // pause when hero is off-screen
+    new IntersectionObserver(es=>{
+      es.forEach(e=>{
+        const was = state.running; state.running = e.isIntersecting;
+        if (state.running && !was){ requestAnimationFrame(render); }
+      });
+    }).observe(wrap);
+    return state;
+  }
+  try { hero3d = initHero3D(); } catch(e){ hero3d = null; }
+
+  /* ---------- no animation fallback ---------- */
+  if (!hasGsap || reduce){
+    if (hero3d) hero3d.drop = 1;
+    document.querySelectorAll('.manifesto .mw').forEach(w=>w.style.opacity=1);
+    initStatic();
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- smooth scroll ---------- */
+  let lenis = null;
+  if (window.Lenis){
+    lenis = new Lenis({duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true});
+    lenis.on('scroll', ScrollTrigger.update);
+    window.__lenis = lenis;
+    gsap.ticker.add(t=>lenis.raf(t*1000));
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href');
+      const target = id === '#top' ? 0 : document.querySelector(id);
+      if (target === null) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(target, {duration:1.6});
+      else if (id === '#top') window.scrollTo({top:0, behavior:'smooth'});
+      else target.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  /* ---------- preloader + hero intro ---------- */
+  if (lenis) lenis.stop();
+  const chars = document.querySelectorAll('.hero h1 .c');
+  gsap.set(chars, {yPercent:110, fontVariationSettings:"'wdth' 62"});
+  gsap.set('.hero .reveal', {y:30, opacity:0});
+  gsap.set('.nav', {y:-30, opacity:0});
+
+  const num = document.querySelector('.loader-num');
+  const counter = {v:0};
+  const tl = gsap.timeline({paused:true});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>tl.play(0)));
+  tl.to('.loader-stack i', {scaleX:1, duration:1.3, stagger:.18, ease:'power3.inOut'}, 0)
+    .to(counter, {v:100, duration:1.7, ease:'power2.inOut', onUpdate:()=>{ num.textContent = Math.round(counter.v); }}, 0)
+    .to('.loader', {yPercent:-100, duration:1, ease:'expo.inOut'}, '+=.15')
+    .add(()=>{ if (hero3d) gsap.to(hero3d, {drop:1, duration:1.8, ease:'power3.out'}); }, '-=.6')
+    .to(chars, {yPercent:0, duration:1.1, stagger:.028, ease:'expo.out'}, '-=.45')
+    .to(chars, {fontVariationSettings:"'wdth' 125", duration:1.4, stagger:.028, ease:'expo.out'}, '<.15')
+    .to('.hero .reveal', {y:0, opacity:1, duration:1, stagger:.1, ease:'expo.out'}, '-=1.1')
+    .to('.nav', {y:0, opacity:1, duration:.9, ease:'expo.out'}, '<')
+        .add(()=>{ document.querySelector('.loader').style.display='none'; if (lenis) lenis.start(); gsap.ticker.lagSmoothing(0); });
+
+  /* hero scroll: slabs come apart, headline drifts */
+  ScrollTrigger.create({
+    trigger:'.hero', start:'top top', end:'bottom top', scrub:true,
+    onUpdate:self=>{ if (hero3d) hero3d.scroll = self.progress; }
+  });
+  gsap.to('.hero-content', {yPercent:-18, opacity:.2, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+
+  /* marquee: continuous + scroll velocity */
+  const track = document.querySelector('.marquee-track');
+  track.innerHTML += track.innerHTML;
+  const mq = gsap.to(track, {xPercent:-50, duration:28, ease:'none', repeat:-1});
+  ScrollTrigger.create({
+    onUpdate:self=>{
+      const v = self.getVelocity()/300;
+      gsap.to(mq, {timeScale: 1 + Math.min(4, Math.abs(v)), duration:.3, overwrite:true});
+      gsap.to(mq, {timeScale:1, duration:1, delay:.3});
+    }
+  });
+
+  /* manifesto word fill */
+  gsap.to('.manifesto .mw', {
+    opacity:1, stagger:.1, ease:'none',
+    scrollTrigger:{trigger:'#manifesto', start:'top 78%', end:'bottom 45%', scrub:true}
+  });
+
+  /* section headings: forged reveal */
+  gsap.utils.toArray('.sec-head h2, .work-intro h2, .process-sticky h2, .promises h2, .faq h2, .contact h2').forEach(h=>{
+    gsap.fromTo(h, {fontVariationSettings:"'wdth' 62", y:60, opacity:0},
+      {fontVariationSettings:"'wdth' 125", y:0, opacity:1, duration:1.4, ease:'expo.out', scrollTrigger:{trigger:h, start:'top 85%'}});
+  });
+  gsap.utils.toArray('.founder .reveal, .sec-head p, .manifesto-foot > *').forEach(el=>{
+    gsap.from(el, {y:40, opacity:0, duration:1.1, ease:'expo.out', scrollTrigger:{trigger:el, start:'top 88%'}});
+  });
+  gsap.from('.svc', {y:60, opacity:0, duration:1, stagger:.08, ease:'expo.out', scrollTrigger:{trigger:'.svc-list', start:'top 80%'}});
+  gsap.from('.plan', {y:60, opacity:0, duration:1, stagger:.12, ease:'expo.out', scrollTrigger:{trigger:'.plans', start:'top 82%'}});
+  gsap.from('.promise', {y:60, opacity:0, duration:1, stagger:.1, ease:'expo.out', scrollTrigger:{trigger:'.promise-grid', start:'top 82%'}});
+
+  /* work horizontal scroll (desktop) */
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', ()=>{
+    const wt = document.querySelector('.work-track');
+    const dist = ()=> wt.scrollWidth - window.innerWidth;
+    const h = gsap.to(wt, {x:()=>-dist(), ease:'none', scrollTrigger:{
+      trigger:'.work', start:'top top', end:()=>'+='+dist(), pin:true, scrub:1, invalidateOnRefresh:true, anticipatePin:1
+    }});
+    gsap.utils.toArray('.project .frame').forEach(f=>{
+      gsap.fromTo(f, {rotate:3, scale:.9}, {rotate:0, scale:1, ease:'none', scrollTrigger:{
+        trigger:f.closest('.project'), containerAnimation:h, start:'left right', end:'center center', scrub:true
+      }});
+    });
+  });
+
+  /* process rail + active steps */
+  gsap.to('.steps .rail', {scaleY:1, ease:'none', scrollTrigger:{trigger:'.steps', start:'top 60%', end:'bottom 60%', scrub:true}});
+  gsap.utils.toArray('.step').forEach(s=>{
+    ScrollTrigger.create({trigger:s, start:'top 62%', onEnter:()=>s.classList.add('on'), onLeaveBack:()=>s.classList.remove('on')});
+  });
+
+  /* giant footer word */
+  gsap.fromTo('.giant', {yPercent:50, fontVariationSettings:"'wdth' 62"}, {yPercent:0, fontVariationSettings:"'wdth' 125", ease:'none', scrollTrigger:{trigger:'.giant', start:'top bottom', end:'bottom bottom', scrub:true}});
+
+  initStatic(true);
+
+  window.addEventListener('load', ()=>ScrollTrigger.refresh());
+
+  /* ---------- interactions shared ---------- */
+  function initStatic(animated){
+    if (!fine) return;
+    document.body.classList.add('has-cursor');
+    const cur = document.querySelector('.cursor'), dot = document.querySelector('.cursor-dot'), label = cur.querySelector('span');
+    let x=innerWidth/2, y=innerHeight/2, cx=x, cy=y;
+    window.addEventListener('pointermove', e=>{ x=e.clientX; y=e.clientY; dot.style.transform='translate('+x+'px,'+y+'px)'; });
+    (function loop(){ cx += (x-cx)*.16; cy += (y-cy)*.16; cur.style.transform='translate('+cx+'px,'+cy+'px)'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('[data-cursor]').forEach(el=>{
+      el.addEventListener('pointerenter', ()=>{ label.textContent = el.dataset.cursor; cur.classList.add('is-hover'); });
+      el.addEventListener('pointerleave', ()=>cur.classList.remove('is-hover'));
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      if (el.closest('[data-cursor]')) return;
+      el.addEventListener('pointerenter', ()=>cur.classList.add('is-link'));
+      el.addEventListener('pointerleave', ()=>cur.classList.remove('is-link'));
+    });
+
+    /* magnetic buttons */
+    if (animated){
+      document.querySelectorAll('.magnetic').forEach(b=>{
+        b.addEventListener('pointermove', e=>{
+          const r = b.getBoundingClientRect();
+          gsap.to(b, {x:(e.clientX-r.left-r.width/2)*.28, y:(e.clientY-r.top-r.height/2)*.38, duration:.5, ease:'power3.out'});
+        });
+        b.addEventListener('pointerleave', ()=>gsap.to(b, {x:0, y:0, duration:.8, ease:'elastic.out(1,.4)'}));
+      });
+    }
+
+    /* service hover preview */
+    const pv = document.querySelector('.svc-preview');
+    const items = pv.querySelectorAll('.pv');
+    let px=0, py=0, vx=0, vy=0, shown=false;
+    document.querySelectorAll('.svc').forEach(s=>{
+      s.addEventListener('pointerenter', ()=>{
+        items.forEach(i=>i.classList.toggle('on', i.dataset.pv===s.dataset.pv));
+        shown = true;
+        if (animated) gsap.to(pv, {opacity:1, scale:1, duration:.5, ease:'expo.out'}); else { pv.style.opacity=1; pv.style.transform='scale(1)'; }
+      });
+      s.addEventListener('pointerleave', ()=>{
+        shown = false;
+        if (animated) gsap.to(pv, {opacity:0, scale:.6, duration:.4, ease:'expo.out'}); else pv.style.opacity=0;
+      });
+    });
+    (function pvLoop(){
+      vx += (x-vx)*.12; vy += (y-vy)*.12;
+      const rot = Math.max(-12, Math.min(12, (x-vx)*.08));
+      if (shown || pv.style.opacity !== '0'){
+        pv.style.left = (vx+30)+'px'; pv.style.top = (vy-110)+'px';
+        pv.style.rotate = rot+'deg';
+      }
+      requestAnimationFrame(pvLoop);
+    })();
+  }
+})();
+</script>
+<script>
+/* IronStack assistant v2: free, runs fully in the browser, no AI service, nothing stored */
+(function(){
+  const WA='https://wa.me/923212995521?text=Hi%20IronStack%2C%20I%20have%20a%20question%20about%20a%20website.';
+  const L=(h,t)=>'<a href="'+h+'" data-go>'+t+'</a>';
+  const NEXT='Want to see it for your business? '+L('#contact','Request a free homepage mockup')+', it takes about a minute.';
+
+  /* ---------- industries ---------- */
+  const IND=[
+    {n:'plumbing',w:['plumb','plumber','drain','pipe','water heater','sewer','rooter'],f:['tap-to-call and a 24/7 emergency banner','service pages with "from" prices','a quick quote form','a service-area section for Google'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'HVAC',w:['hvac','heating','cooling','air condition','furnace','ac repair','a/c'],f:['tap-to-call and emergency banner','seasonal tune-up offers','a quote form','service-area pages'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'electrical',w:['electric','electrician','wiring','panel upgrade','ev charger'],f:['tap-to-call and emergency banner','service pages','licensing and insurance badges','a quote form'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'roofing',w:['roof','roofer','gutter','siding'],f:['before-and-after gallery','free inspection booking','financing info','storm damage page'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'construction and contracting',w:['contractor','construction','remodel','renovat','handyman','builder','carpent','flooring','painting','painter','landscap','lawn','concrete','fence','pool'],f:['a project gallery','a quote request form','reviews section','service-area pages'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'cleaning',w:['cleaning','cleaner','maid','janitor','pressure wash','carpet clean'],f:['instant price estimate form','online booking','recurring plan options','reviews'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'auto',w:['auto','car repair','mechanic','body shop','detailing','tire','towing','car wash','dealership'],f:['online appointment booking','service menu with prices','tap-to-call','reviews'],demo:['/work/northline-plumbing','Northline Plumbing']},
+    {n:'dental',w:['dental','dentist','orthodont','teeth','tooth'],f:['online appointment booking','insurance information','new-patient page','team profiles'],demo:['/work/harborview-dental','Harborview Dental']},
+    {n:'medical and wellness',w:['clinic','doctor','medical','chiropract','physio','therap','spa','med spa','massage','wellness','veterinar','vet ','pharmacy','optomet'],f:['online booking','services and pricing pages','insurance or payment info','team profiles'],demo:['/work/harborview-dental','Harborview Dental']},
+    {n:'beauty',w:['salon','barber','hair','nail','beauty','lash','brow','tattoo','makeup'],f:['online booking','service menu with prices','Instagram gallery','gift cards'],demo:['/work/harborview-dental','Harborview Dental']},
+    {n:'fitness',w:['gym','fitness','yoga','pilates','personal train','crossfit','martial art','dance studio'],f:['class schedule','membership pricing','free trial sign-up','trainer profiles'],demo:['/work/harborview-dental','Harborview Dental']},
+    {n:'restaurant',w:['restaurant','cafe','coffee','bakery','pizza','food truck','bar ','bistro','diner','catering','grill','burger','sushi','kitchen'],f:['a mobile-friendly menu','table reservations','online ordering links','private events page'],demo:['/work/maple-and-oak','Maple and Oak Bistro']},
+    {n:'online store',w:['store','shop','ecommerce','e-commerce','sell online','products','boutique','clothing','jewel','candle','shopify'],f:['a Shopify store with product pages','cart and secure checkout','shipping and tax setup','collections and filters'],demo:['/work/ember-goods','Ember Goods'],custom:true},
+    {n:'real estate',w:['real estate','realtor','property','realty','mortgage','broker','home for sale','listing'],f:['property listings','lead capture forms','agent profiles','neighborhood pages']},
+    {n:'law firm',w:['law','lawyer','attorney','legal','paralegal'],f:['practice area pages','free consultation booking','attorney profiles','trust signals and results']},
+    {n:'accounting and finance',w:['account','bookkeep','tax prep','cpa','financial advis','insurance agen'],f:['service pages','consultation booking','secure contact form','team profiles']},
+    {n:'photography and creative',w:['photograph','videograph','wedding','event planner','dj ','florist','artist','designer'],f:['a portfolio gallery','packages and pricing','booking or inquiry form','testimonials']},
+    {n:'education',w:['school','tutor','academy','course','coach','training','daycare','preschool'],f:['programs and schedules','enrollment or inquiry form','teacher profiles','FAQ']},
+    {n:'church and nonprofit',w:['church','nonprofit','non-profit','charity','foundation','mosque','ministry'],f:['events calendar','online donations','about and mission pages','volunteer sign-up']},
+    {n:'startup and SaaS',w:['startup','saas','web app','software','tech company','agency','consult'],f:['a product landing page','pricing page','demo booking','blog'],custom:true}
+  ];
+
+  /* ---------- knowledge base ---------- */
+  const KB=[
+    {id:'greet',k:['hi','hello','hey','salam','assalam','good morning','good afternoon','good evening','yo','hola'],
+     a:'Hi! I am the IronStack assistant. I can tell you what a website for your business would include, what it costs, how long it takes, and answer general website questions. What kind of business do you have?',
+     c:['Pricing','How long does it take?','What do I need to get started?']},
+    {id:'pricing',k:['price','pricing','cost','how much','charge','rate','budget','expensive','cheap','afford','quote','fee','fees','estimate'],
+     a:'Simple, fixed pricing:<br><b>One Page</b>: $500<br><b>Business</b> (up to 5 pages): $1,000<br><b>Custom</b> (online stores, web apps, bigger sites): priced per project.<br>Most local service businesses do great with the Business plan. You see a free mockup before paying anything. '+L('#pricing','Compare plans'),
+     c:['What is in the $500 plan?','What is in the $1,000 plan?','Online store pricing']},
+    {id:'onepage',k:['one page','single page','landing page','$500','500 plan','starter','one-page','onepage'],
+     a:'<b>One Page ($500)</b>: a single polished scrolling page with all key sections, mobile-first custom design, contact form and tap-to-call, basic SEO, Google Business Profile link-up, and 14 days of fixes after launch. Great for new businesses or a simple online presence.',
+     c:['What is in the $1,000 plan?','How long does it take?','What do I need to get started?']},
+    {id:'business',k:['5 page','five page','5 pages','multi page','multiple pages','$1000','$1,000','1000 plan','business plan','recommended'],
+     a:'<b>Business ($1,000)</b>: up to 5 pages (for example Home, About, Services, Gallery, Contact), fully custom design and animations, online booking, a quote form or blog, speed and SEO optimization, easy editing on WordPress, and 30 days of support. This is the best fit for most local businesses.',
+     c:['How long does it take?','Can I edit it myself?','What do I need to get started?']},
+    {id:'custom',k:['custom plan','web app','application','portal','membership site','marketplace','booking system','dashboard','more than 5 pages','large site','big website'],
+     a:'Custom projects (online stores, web apps, portals, sites with more than 5 pages) are priced per project, because cost depends on features and integrations. As a rough guide, a solid Shopify store usually lands above the $1,000 plan. Describe your idea in the '+L('#contact','form')+' and you get a fixed written quote.',
+     c:['Online store pricing','Do you build CRMs?','What do I need to get started?']},
+    {id:'store',k:['online store pricing','shopify','ecommerce','e-commerce','sell online','online shop','woocommerce','payment gateway','checkout','sell products'],
+     a:'Yes, we build online stores, mostly on <b>Shopify</b> (easiest to run day to day) or <b>WooCommerce</b> on WordPress. That includes product pages, cart and secure checkout with Stripe, PayPal or Shopify Payments, shipping and tax setup, and a walkthrough so you can add products yourself. Stores are quoted per project. See our '+L('/work/ember-goods','Ember Goods store concept')+'.',
+     c:['Shopify vs WordPress?','How long does it take?','Pricing']},
+    {id:'mockup',k:['mockup','mock up','free','demo','sample design','preview','design first','see first','before paying','trial'],
+     a:'The free mockup is a homepage design made specifically for your business, at no cost and with no commitment. If you like it, we agree on a fixed price and build the full site. If not, you owe nothing. '+L('#contact','Request yours here')+'.',
+     c:['How long does it take?','Pricing','What do I need to get started?']},
+    {id:'process',k:['process','how does it work','how it works','steps','what happens after','next step','what happens next'],
+     a:'Four steps:<br>1. <b>Free mockup</b> of your homepage<br>2. <b>Short call</b> and one fixed price in writing<br>3. <b>Build</b>, with progress links you can review<br>4. <b>Launch</b> on your domain, plus a walkthrough so you can update it.',
+     c:['How long does it take?','How do payments work?','What do I need to get started?']},
+    {id:'start',k:['get started','start','begin','need from me','what do i need','what do you need','requirements','information','content','photos','text','copy','copywriting','write the content'],
+     a:'Very little to start. Just your business name, what you offer, your service area, and a logo if you have one. Photos help but are not required: we can use licensed stock images and write the website text for you based on a short questionnaire. Then '+L('#contact','request your free mockup')+'.',
+     c:['Pricing','How long does it take?','Do you write the content?']},
+    {id:'timeline',k:['how long','timeline','weeks','days','fast','quick','quickly','deadline','when can','urgent','asap','turnaround','launch date'],
+     a:'Typical timelines: <b>One Page</b> about 1 to 2 weeks, <b>Business</b> about 2 to 4 weeks, custom projects depend on scope. Your free mockup usually arrives within a few business days. Quick feedback on your side speeds things up a lot.',
+     c:['Pricing','What do I need to get started?','How the free mockup works']},
+    {id:'location',k:['where are you','located','location','based','pakistan','country','timezone','time zone','office','remote','offshore','which country'],
+     a:'We are based in Pakistan and work remotely with small businesses across the <b>US and Canada</b>. Calls and updates happen during <b>your</b> business hours, Eastern to Pacific. Working remotely is a big part of how we keep prices fair.',
+     c:['Pricing','How do we communicate?','See your work']},
+    {id:'comms',k:['communicate','communication','zoom','meeting','english','language','call me','video call','updates','how do we talk'],
+     a:'We communicate in English by email, phone, WhatsApp or video call, whichever you prefer, scheduled during your business hours. You get progress links during the build so you can see the site take shape.',
+     c:['How long does it take?','Pricing','Get a free mockup']},
+    {id:'payment',k:['pay','payment','payments','deposit','upfront','installment','invoice','paypal','card','wise','bank transfer','refund','milestone'],
+     a:'Payments follow the schedule in your written quote. Typically a first payment starts the project and the balance is due before launch, so you never pay the full amount before seeing real progress. Common options like card, PayPal or bank transfer are confirmed on your call. Details are in our '+L('/terms','terms')+'.',
+     c:['Do I own the website?','Pricing','What happens after?']},
+    {id:'own',k:['own','ownership','rights','my files','lock in','lock-in','who owns','transfer','source code'],
+     a:'Once the project is paid in full, <b>you own</b> your website design, content, domain and accounts. No lock-in, and you can move it to anyone you like later. Third-party themes, plugins and fonts keep their own licenses.',
+     c:['Can I edit it myself?','Hosting and domain','Pricing']},
+    {id:'edit',k:['edit','update myself','update it','myself','change it','change content','cms','maintain','maintenance','manage','admin','dashboard login','make changes'],
+     a:'Yes. WordPress and Shopify sites come with a short walkthrough so you can change text, photos and prices yourself in a simple dashboard, no coding needed. If you would rather not touch it, we can handle updates for you on a small monthly plan.',
+     c:['How much is maintenance?','Hosting and domain','Pricing']},
+    {id:'maint',k:['how much is maintenance','maintenance cost','monthly maintenance','how much per month','how much a month','per month','a month','monthly','monthly fee','retainer','ongoing','care plan'],
+     a:'There is no required monthly fee from us. Your ongoing costs are usually just hosting and the domain (often around $10 to $30 a month combined, depending on the provider). An optional care plan for updates, backups and small edits is quoted separately if you want one.',
+     c:['Hosting and domain','Can I edit it myself?','Pricing']},
+    {id:'hosting',k:['hosting','host','server','domain','domain name','ssl','https','godaddy','namecheap','bluehost','hostinger','dns'],
+     a:'Quick guide: your <b>domain</b> is your address (yourbusiness.com), usually about $10 to $20 a year. <b>Hosting</b> is where the site lives. <b>SSL</b> is the padlock that makes it secure, and it is free on good hosts. We set all of it up for you, in accounts under your name, and can launch on fast, low-cost hosting.',
+     c:['Do I own the website?','How much is maintenance?','Pricing']},
+    {id:'email',k:['business email','email address','professional email','info@','google workspace','outlook'],
+     a:'Yes, we can set up a professional address like you@yourbusiness.com. Free email forwarding to your existing Gmail works for many small businesses; Google Workspace or Microsoft 365 are paid options if you want a full inbox.',
+     c:['Hosting and domain','Pricing','What do I need to get started?']},
+    {id:'wpvs',k:['wordpress vs','shopify vs','which platform','wix','squarespace','webflow','platform','which is better','wordpress or','cms'],
+     a:'Rule of thumb: <b>WordPress</b> for service businesses and blogs (flexible, easy to edit). <b>Shopify</b> for online stores (best checkout and inventory). <b>Custom code</b> for web apps or unusual features. Wix and Squarespace are fine to DIY but are harder to grow and to rank well. We will recommend the right one for your goals.',
+     c:['Pricing','Online store pricing','Can I edit it myself?']},
+    {id:'seo',k:['seo','rank','ranking','search engine','found online','visibility','traffic','first page','google search','keywords'],
+     a:'Every site includes SEO basics: fast loading, mobile-friendly layout, clean structure, page titles and descriptions, and Google Business Profile setup. For local businesses the biggest wins are a complete Google Business Profile, steady reviews, and a page for each service and area you cover. No honest agency can guarantee #1 rankings, and we will not pretend to.',
+     c:['Google Business Profile','More customers from my site','What is in the $1,000 plan?']},
+    {id:'gbp',k:['google business','google my business','google maps','map listing','gbp','local listing'],
+     a:'Your Google Business Profile is the listing that shows on Google Maps and local results. It is free and often brings more calls than the website itself. We link your website to it and can help you optimize categories, services, photos and review requests.',
+     c:['SEO','More customers from my site','Pricing']},
+    {id:'leads',k:['more customers','more calls','more leads','grow my business','marketing','convert','conversion','not getting calls','sales'],
+     a:'What usually works for local businesses: a clear headline saying what you do and where, a big tap-to-call button, your prices or "starting at" ranges, real reviews and photos, a quick quote or booking form, and a page per service. Pair the site with a strong Google Business Profile. Every IronStack site is built around these.',
+     c:['Google Business Profile','Do you run ads?','Get a free mockup']},
+    {id:'ads',k:['ads','advertising','google ads','facebook ads','ppc','paid ads','meta ads','campaign'],
+     a:'Our focus is the website, which is what makes ads pay off. We can build dedicated landing pages for Google or Facebook ads and add conversion tracking, so you can see which ads bring calls. Ad management itself is quoted separately.',
+     c:['More customers from my site','Pricing','Get a free mockup']},
+    {id:'mobile',k:['mobile','phone friendly','responsive','tablet','iphone','android'],
+     a:'Every site we build is mobile-first, because most local customers find you on their phone. That means fast loading, big tap-to-call buttons, readable text and forms that are easy to fill with a thumb.',
+     c:['SEO','Pricing','See your work']},
+    {id:'speed',k:['speed','slow','loading','performance','core web vitals','pagespeed'],
+     a:'Fast sites keep more visitors and rank better. We optimize images, keep code lean and use quality hosting, aiming for strong Google PageSpeed scores. If your current site is slow, we can also tell you why.',
+     c:['Can you fix my current site?','SEO','Pricing']},
+    {id:'redesign',k:['redesign','existing site','current website','already have','improve','fix my','old website','outdated','revamp','current site'],
+     a:'Yes. Sometimes a redesign is right, and sometimes a few fixes to speed, mobile layout and contact buttons are enough. Share your current site in the '+L('#contact','form')+' and we will tell you honestly which one you need, along with a free mockup of the new homepage.',
+     c:['Pricing','How long does it take?','How the free mockup works']},
+    {id:'booking',k:['booking','appointment','schedule online','calendly','reservation','book online','calendar'],
+     a:'Yes. We add online booking with tools like Calendly, Square Appointments, or your existing booking software, so customers can pick a time without calling. Included in the Business plan.',
+     c:['What is in the $1,000 plan?','Pricing','Get a free mockup']},
+    {id:'forms',k:['contact form','quote form','form','leads to my email','lead form'],
+     a:'Every site has a contact or quote form that sends requests straight to your email, with spam protection. We can also add fields like service type, ZIP code or photo uploads.',
+     c:['Booking','Pricing','Get a free mockup']},
+    {id:'analytics',k:['analytics','track visitors','google analytics','statistics','stats','tracking'],
+     a:'We can set up Google Analytics and call or form tracking so you can see how many people visit, where they come from and how many contact you.',
+     c:['More customers from my site','Pricing']},
+    {id:'security',k:['secure','security','hack','backup','backups','virus','malware','privacy','gdpr','ada','accessib'],
+     a:'We build with security in mind: SSL, updated software, spam protection and backups. We also follow accessibility best practices like readable contrast, keyboard navigation and image descriptions, which helps more people use your site.',
+     c:['How much is maintenance?','Hosting and domain']},
+    {id:'language',k:['spanish','french','multilingual','bilingual','two languages','translate'],
+     a:'Yes, we can build bilingual sites, for example English and Spanish or English and French, with a simple language switch. This is quoted as an add-on.',
+     c:['Pricing','Get a free mockup']},
+    {id:'mapp',k:['mobile app','ios','android app','iphone app','app store','play store','native app','flutter','react native'],
+     a:'Our focus is websites and web apps. A well-built web app works on every phone without an app store, and can even be installed on the home screen. If you truly need an App Store or Play Store app, describe it in the '+L('#contact','form')+' and we will scope it as a custom project.',
+     c:['Pricing','Do you build CRMs?','What do I need to get started?']},
+    {id:'crm',k:['crm','lead tracking','customer management','pipeline','follow up','follow-up','database'],
+     a:'Yes, we build <b>custom CRMs</b> around how your team works, to track leads, customers and follow-ups in one place, and we can connect them to your website forms. Quoted per project.',
+     c:['Pricing','What do I need to get started?']},
+    {id:'brand',k:['logo','animation','social','instagram','facebook','posts','video','reels','editing','branding','tiktok','youtube'],
+     a:'We also do <b>logo animation</b>, <b>social media posts</b> and <b>video editing</b> (reels, promos and ads from your footage). Add them to any website or order them on their own, quoted per project.',
+     c:['Pricing','Get a free mockup']},
+    {id:'work',k:['portfolio','examples','your work','previous','past projects','samples','see work','see your work','case study','reviews','testimonials','references'],
+     a:'Take a look at our '+L('#work','concept websites')+'. They are fully working designs we built for typical small businesses (clearly labeled as concepts), so you can click around and judge the quality yourself. Your free mockup is made at the same level.',
+     c:['How the free mockup works','Pricing']},
+    {id:'support',k:['support','revision','revisions','changes after','bug','after launch','warranty','guarantee','help after'],
+     a:'Support after launch: <b>14 days</b> on One Page, <b>30 days</b> on Business, and a tailored plan on custom projects. Revision rounds are written into your quote, so you know exactly what is included.',
+     c:['How much is maintenance?','Can I edit it myself?']},
+    {id:'human',k:['contact','talk to','phone number','human','email you','whatsapp','reach you','speak to','owner','someone','founder'],
+     a:'You can reach the founder, Abdul, at <a href="mailto:hello@ironstackstudio.com">hello@ironstackstudio.com</a> or on <a href="'+WA+'" target="_blank" rel="noopener">WhatsApp</a>. The fastest start is the '+L('#contact','free mockup form')+'.',
+     c:['Pricing','How the free mockup works']},
+    {id:'who',k:['who are you','what is ironstack','about you','about ironstack','are you a bot','are you real','real person','are you human','are you ai','chatbot'],
+     a:'I am IronStack\'s automated assistant. IronStack Studio is a small web studio founded by Abdul Ahad that designs and builds websites, online stores and brand content for small businesses in the US and Canada.',
+     c:['Pricing','See your work','How the free mockup works']},
+    {id:'thanks',k:['thanks','thank you','thx','great','awesome','perfect','cool','okay','got it','nice'],
+     a:'Glad that helped! When you are ready, the '+L('#contact','free mockup form')+' takes about a minute.',
+     c:['Get a free mockup','Pricing']},
+    {id:'bye',k:['bye','goodbye','see you'],a:'Thanks for stopping by. Have a great day!',c:[]}
+  ];
+  const CHIPMAP={'Pricing':'pricing','How the free mockup works':'mockup','How long does it take?':'timeline','What is in the $500 plan?':'onepage','What is in the $1,000 plan?':'business','Online store pricing':'store','Get a free mockup':'mockup','Can I edit it myself?':'edit','Do you build CRMs?':'crm','What happens after?':'process','How do payments work?':'payment','Do I own the website?':'own','Hosting and domain':'hosting','See your work':'work','What do I need to get started?':'start','Shopify vs WordPress?':'wpvs','How much is maintenance?':'maint','Google Business Profile':'gbp','More customers from my site':'leads','Do you run ads?':'ads','SEO':'seo','Can you fix my current site?':'redesign','Booking':'booking','How do we communicate?':'comms','Do you write the content?':'start','Where are you based?':'location'};
+  const START=['Pricing','Website for my business','How long does it take?','Where are you based?','See your work'];
+
+  function norm(t){return ' '+t.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9$,.\/\- ]/g,' ').replace(/\s+/g,' ')+' ';}
+  function findIndustry(t){
+    for(const ind of IND){ for(const w of ind.w){ const x=w.trim(); if(x.length<=4 ? (t.includes(' '+x+' ')||t.includes(' '+x+'s ')) : t.includes(' '+x)) return ind; } }
+    return null;
+  }
+  const BUILD=/(build|make|create|develop|design|need|want|get|do you do|can you|could you|website for|site for|web ?site|webpage|redesign)/;
+  function industryAnswer(ind){
+    const plan = ind.custom
+      ? 'This is usually a <b>custom project</b>, priced per project after a quick look at what you sell.'
+      : 'Most '+ind.n+' businesses choose our <b>Business plan ($1,000)</b> for a full 5-page site, or start with <b>One Page ($500)</b>.';
+    const demo = ind.demo ? ' See a working example: '+L(ind.demo[0],ind.demo[1]+' concept')+'.' : '';
+    return {a:'Absolutely, we build websites for '+ind.n+' businesses. A typical '+ind.n+' site from us includes '+ind.f.slice(0,-1).join(', ')+' and '+ind.f[ind.f.length-1]+', all mobile-first and built to turn visitors into calls. '+plan+demo+' Timeline is usually 2 to 4 weeks.<br>'+NEXT,
+            c:['Pricing','What do I need to get started?','How long does it take?']};
+  }
+  function match(text){
+    const t=norm(text);
+    let best=null, score=0;
+    KB.forEach(it=>{
+      let sc=0;
+      it.k.forEach(k=>{
+        const kk=k.toLowerCase();
+        if(kk.length<=4 && !/[0-9$]/.test(kk)){ if(t.includes(' '+kk+' ')||t.includes(' '+kk+'s ')) sc+=1; }
+        else if(t.includes(kk)) sc+= kk.includes(' ')? 1+kk.split(' ').length : 1.5;
+      });
+      if(sc>score){score=sc;best=it;}
+    });
+    const ind=findIndustry(t);
+    const wantsBuild=BUILD.test(t);
+    /* industry questions win unless a very specific topic (like pricing) clearly dominates */
+    if(best && score>=3 && !['greet','thanks','human','work','mockup','pricing','custom','store'].includes(best.id)) return best;
+    if(ind && (wantsBuild || score<2 || ['greet','thanks','human','work','mockup'].includes(best&&best.id))){
+      if(best && best.id==='pricing' && score>=1.5 && !ind.custom){
+        return {a:'For a '+ind.n+' business: <b>One Page</b> is $500 and a full <b>Business</b> site (up to 5 pages) is $1,000, which is what most '+ind.n+' businesses choose. It typically includes '+ind.f.join(', ')+'.<br>'+NEXT,c:['What is in the $1,000 plan?','How long does it take?','What do I need to get started?']};
+      }
+      return industryAnswer(ind);
+    }
+    if(score>0) return best;
+    if(wantsBuild && /(site|website|web|page|store|shop|app)/.test(t)){
+      return {a:'Yes, we can build that. We design and develop websites for almost any small business: service companies, clinics, restaurants, stores, professionals and startups. Pricing starts at $500 for one page and $1,000 for a full 5-page site; stores and custom features are quoted per project.<br>'+NEXT,c:['Pricing','Website for my business','How long does it take?']};
+    }
+    return null;
+  }
+  function fallback(){
+    return {a:'I want to make sure I give you a useful answer. I can help with: <b>what a website for your business would include</b>, <b>pricing</b>, <b>timelines</b>, <b>platforms</b> (WordPress, Shopify), <b>domains and hosting</b>, <b>SEO and getting more customers</b>, and <b>how working with us goes</b>. Try asking something like "website for my bakery" or "how much for 5 pages".',
+            c:['Website for my business','Pricing','Shopify vs WordPress?','More customers from my site']};
+  }
+
+  const launch=document.querySelector('.bot-launch'), bot=document.getElementById('bot');
+  if(!launch||!bot) return;
+  const log=bot.querySelector('.bot-log'), chips=bot.querySelector('.chips'), form=bot.querySelector('.bot-form'), input=form.querySelector('input');
+  let started=false;
+  const history=[]; let aiOn=true; let busy=false;
+
+  function esc(t){return t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+  function fmt(t){
+    let h=esc(t.trim());
+    h=h.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+    h=h.replace(/(^|\n)\s*[-*]\s+/g,'$1• ');
+    h=h.replace(/(https?:\/\/[^\s<]+|(?<![@\w.\/])(?:www\.)?ironstackstudio\.com(?:\/[^\s<]*)?)/g,(m)=>{
+      let u=m.replace(/[.,)]+$/,''), tail=m.slice(u.length);
+      const href=/^https?:/.test(u)?u:'https://'+u.replace(/^www\./,'');
+      return '<a href="'+href+'" target="_blank" rel="noopener">'+u+'</a>'+tail;
+    });
+    h=h.replace(/[\w.+-]+@ironstackstudio\.com/g,m=>'<a href="mailto:'+m+'">'+m+'</a>');
+    return h.replace(/\n/g,'<br>');
+  }
+  async function askAI(){
+    const ctrl=new AbortController(); const t=setTimeout(()=>ctrl.abort(),12000);
+    try{
+      const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:history.slice(-12)}),signal:ctrl.signal});
+      if(r.status===503 || r.status===404) aiOn=false;
+      if(!r.ok) return null;
+      const d=await r.json(); return d.reply||null;
+    }catch(e){ return null; } finally{ clearTimeout(t); }
+  }
+  function plain(html){const d=document.createElement('div'); d.innerHTML=html; return d.textContent;}
+
+  function add(html,who){
+    const m=document.createElement('div'); m.className='msg '+who;
+    if(who==='u') m.textContent=html; else m.innerHTML=html;
+    log.appendChild(m); log.scrollTop=log.scrollHeight;
+  }
+  function setChips(list){
+    chips.innerHTML='';
+    list.forEach(c=>{const b=document.createElement('button'); b.type='button'; b.textContent=c; b.onclick=()=>ask(c, CHIPMAP[c]||c); chips.appendChild(b);});
+  }
+  function reply(it){
+    const typing=document.createElement('div'); typing.className='msg b typing'; typing.innerHTML='<i></i><i></i><i></i>';
+    log.appendChild(typing); log.scrollTop=log.scrollHeight;
+    setTimeout(()=>{
+      typing.remove();
+      const r = it || fallback();
+      add(r.a,'b'); history.push({role:'assistant',content:plain(r.a)}); setChips(r.c && r.c.length ? r.c : START);
+    }, 500+Math.random()*350);
+  }
+  async function askTyped(text){
+    if(busy) return; busy=true;
+    add(text,'u'); history.push({role:'user',content:text});
+    const typing=document.createElement('div'); typing.className='msg b typing'; typing.innerHTML='<i></i><i></i><i></i>';
+    log.appendChild(typing); log.scrollTop=log.scrollHeight;
+    const reply = aiOn ? await askAI() : null;
+    typing.remove();
+    if(reply){
+      add(fmt(reply),'b'); history.push({role:'assistant',content:reply});
+      const it=match(text); setChips(it && it.c && it.c.length ? it.c : START);
+    } else {
+      const r = match(text) || fallback();
+      add(r.a,'b'); history.push({role:'assistant',content:plain(r.a)}); setChips(r.c && r.c.length ? r.c : START);
+    }
+    busy=false;
+  }
+  function ask(text, id){
+    if(!text.trim()) return;
+    if(!id) return askTyped(text);
+    add(text,'u'); history.push({role:'user',content:text});
+    if(id==='Website for my business'){
+      reply({a:'Happy to help! What kind of business is it? For example plumbing, dental, restaurant, salon, contractor, law firm or online store. Just type it and I will show you what your website would include.',c:['Plumbing','Restaurant','Online store','Salon']});
+      return;
+    }
+    if(['Plumbing','Restaurant','Online store','Salon'].includes(id)){ reply(match('website for '+id)); return; }
+    const it = (id && KB.find(x=>x.id===id)) || match(text);
+    reply(it);
+  }
+  function open(){
+    bot.classList.add('open'); bot.setAttribute('aria-hidden','false');
+    launch.classList.add('hide'); launch.setAttribute('aria-expanded','true');
+    if(!started){ started=true; add('Hi! I am the IronStack assistant. Tell me what kind of business you have and I will show you what your website would include, or ask me anything about pricing, timelines or websites in general.','b'); setChips(START); }
+    setTimeout(()=>input.focus({preventScroll:true}),300);
+  }
+  function close(){
+    bot.classList.remove('open'); bot.setAttribute('aria-hidden','true');
+    launch.classList.remove('hide'); launch.setAttribute('aria-expanded','false'); launch.focus({preventScroll:true});
+  }
+  launch.addEventListener('click',open);
+  const ready=()=>launch.classList.toggle('ready', window.scrollY>window.innerHeight*0.6 || bot.classList.contains('open'));
+  window.addEventListener('scroll',ready,{passive:true}); ready();
+  bot.querySelector('.bot-close').addEventListener('click',close);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && bot.classList.contains('open')) close(); });
+  form.addEventListener('submit',e=>{ e.preventDefault(); const v=input.value; input.value=''; ask(v); });
+  log.addEventListener('click',e=>{
+    const a=e.target.closest('a[data-go]'); if(!a) return;
+    const href=a.getAttribute('href');
+    if(href.startsWith('/')){ a.target='_blank'; a.rel='noopener'; return; }
+    e.preventDefault();
+    const t=document.querySelector(href); if(!t) return;
+    if(window.innerWidth<700) close();
+    if(window.__lenis) window.__lenis.scrollTo(t,{duration:1.4}); else t.scrollIntoView({behavior:'smooth'});
+  });
+  window.__ironBot={match:t=>{const r=match(t);return r?(r.id||'industry:'+(r.a.match(/for ([a-zA-Z ]+?) businesses/)||[])[1]):'FALLBACK';}};
+})();
+</script>
+</body>
+</html>

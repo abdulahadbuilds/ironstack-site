@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ironstackstudio.com/sitemap.xml
