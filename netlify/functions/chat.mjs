@@ -76,37 +76,51 @@ export default async (req, context) => {
   if (!clean.length || clean[clean.length - 1].role !== "user") return json(400, { error: "no_question" });
   while (clean.length && clean[0].role !== "user") clean.shift();
 
-  const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+  const models = [process.env.GEMINI_MODEL, "gemini-flash-latest", "gemini-3.6-flash", "gemini-2.5-flash", "gemini-2.0-flash"]
+    .filter((m, i, a) => m && a.indexOf(m) === i);
+  const payload = JSON.stringify({
+    systemInstruction: { parts: [{ text: SYSTEM }] },
+    contents: clean,
+    generationConfig: { temperature: 0.5, maxOutputTokens: 500 },
+  });
 
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 9000);
-  try {
-    const r = await fetch(url, {
-      method: "POST",
-      signal: ctrl.signal,
-      headers: { "content-type": "application/json", "x-goog-api-key": key },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: SYSTEM }] },
-        contents: clean,
-        generationConfig: { temperature: 0.5, maxOutputTokens: 500 },
-      }),
-    });
-    if (r.status === 429) return json(429, { error: "quota" });
-    if (!r.ok) {
-      console.error("gemini_error", r.status, (await r.text()).slice(0, 300));
-      return json(502, { error: "upstream" });
+  const started = Date.now();
+  let lastStatus = 0, lastDetail = "";
+  for (const model of models) {
+    if (Date.now() - started > 8000) break;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8500 - (Date.now() - started));
+    try {
+      const r = await fetch(url, {
+        method: "POST",
+        signal: ctrl.signal,
+        headers: { "content-type": "application/json", "x-goog-api-key": key },
+        body: payload,
+      });
+      if (r.ok) {
+        const data = await r.json();
+        const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
+        if (text) return json(200, { reply: text.slice(0, 2500), model });
+        lastStatus = 200; lastDetail = "empty reply (" + (data.candidates?.[0]?.finishReason || data.promptFeedback?.blockReason || "unknown") + ")";
+        continue;
+      }
+      lastStatus = r.status;
+      let msg = "";
+      try { msg = (await r.json()).error?.message || ""; } catch {}
+      lastDetail = msg.slice(0, 200);
+      console.error("gemini_error", model, r.status, lastDetail);
+      // 404 = model name not available, 429 = quota for this model: try the next model
+      if (r.status === 404 || r.status === 429 || r.status >= 500) continue;
+      break; // 400/401/403: key or request problem, other models will fail the same way
+    } catch (e) {
+      lastStatus = 504; lastDetail = (e && e.name) || "network";
+      console.error("chat_failed", model, lastDetail);
+    } finally {
+      clearTimeout(timer);
     }
-    const data = await r.json();
-    const text = (data.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").trim();
-    if (!text) return json(502, { error: "empty" });
-    return json(200, { reply: text.slice(0, 2500) });
-  } catch (e) {
-    console.error("chat_failed", e && e.name);
-    return json(504, { error: "timeout" });
-  } finally {
-    clearTimeout(timer);
   }
+  return json(lastStatus === 429 ? 429 : 502, { error: "upstream", status: lastStatus, detail: lastDetail });
 };
 
 export const config = { path: "/api/chat" };
